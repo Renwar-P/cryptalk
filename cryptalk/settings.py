@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com']
-ALLOWED_HOSTS = ['cryptalk.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['cryptalk-32183a196317.herokuapp.com', 'localhost']
 
 # Application definition
 
