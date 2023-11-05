@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com']
 ALLOWED_HOSTS = ['cryptalk-32183a196317.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = ['8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com']
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'blog',
 ]
 
