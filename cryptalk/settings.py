@@ -31,6 +31,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com']
 ALLOWED_HOSTS = ['cryptalk-32183a196317.herokuapp.com', 'localhost']
 ALLOWED_HOSTS = ['8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com']
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -142,14 +144,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
