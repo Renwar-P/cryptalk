@@ -110,6 +110,7 @@ body {
 .btn-signup {
     background-color: #F0810F;
     color: #fff;
+    border-radius: 5px;
 }
 
 .btn-signup:hover,
@@ -164,4 +165,10 @@ body {
 
 .navbar-light .navbar-text {
     color: white;
+}
+
+.form_button {
+
+    color: #F0810F;
+
 }
