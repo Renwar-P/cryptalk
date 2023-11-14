@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from blog.views import AddPostView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("blog.urls"), name="blog-urls"),
     path('summernote/', include('django_summernote.urls')),
     path("accounts/", include("allauth.urls")),
+    path('add_post/', AddPostView.as_view(), name='add_post')
+
+
 ]
