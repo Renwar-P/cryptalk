@@ -5,6 +5,7 @@ from .models import Post
 from .forms import CommentForm
 from django.views.generic import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import UpdateView
 
 
 class PostList(generic.ListView):
@@ -89,3 +90,9 @@ class AddPostView(LoginRequiredMixin, CreateView):
 
         form.instance.author_id = self.request.user.id
         return super().form_valid(form)
+
+
+class UpdatePostView(UpdateView):
+    model = Post
+    template_name = 'update_post.html'
+    fields = ['title', 'content']
