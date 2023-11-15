@@ -30,8 +30,9 @@
                 <p class="card-text">
                   {{ post.excerpt }}
                   <small
-                    ><a href="{% url 'update_post' post.pk %}">(Edit)</a></small
-                  >
+                    ><a href="{% url 'update_post' post.pk %}">(Edit)</a>
+                    <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
+                  </small>
                 </p>
               </a>
               <hr />

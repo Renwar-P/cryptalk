@@ -5,7 +5,7 @@ from .models import Post
 from .forms import CommentForm
 from django.views.generic import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, DeleteView
 
 
 class PostList(generic.ListView):
@@ -96,3 +96,8 @@ class UpdatePostView(UpdateView):
     model = Post
     template_name = 'update_post.html'
     fields = ['title', 'content']
+
+
+class DeletePostView(DeleteView):
+    model = Post
+    template_name = 'delete_post.html'

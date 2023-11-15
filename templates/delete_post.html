@@ -1,15 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    
-  <h1>Edit post</h1>
+  <h1>Delete post</h1>
   <br /><br />
+  <h3>Delete: {{ post.title }}</h3>
   <div class="form-group">
     <form method="POST">
-      {% csrf_token %} {{form.as_p}}
+      {% csrf_token %}
 
       <br /><br />
-      <button class="btn-signup btn-large">Edit</button>
+      <h5>Are you sure...?</h5>
+      <button class="btn-signup btn-large">Delete</button>
     </form>
   </div>
 </div>
