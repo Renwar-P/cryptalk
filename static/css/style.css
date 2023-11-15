@@ -1,6 +1,9 @@
 body {
     background-color: #FFFFFF;
     font-family: Helvetica;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .brand {
@@ -171,4 +174,9 @@ body {
 
     color: #F0810F;
 
+}
+
+
+.main-bg {
+    flex: 1;
 }
