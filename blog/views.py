@@ -85,7 +85,7 @@ class PostLike(View):
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'content', 'featured_image']
+    fields = ['title', 'body', 'featured_image']
 
     def form_valid(self, form):
 
@@ -96,7 +96,7 @@ class AddPostView(LoginRequiredMixin, CreateView):
 class UpdatePostView(UpdateView):
     model = Post
     template_name = 'update_post.html'
-    fields = ['title', 'content', 'featured_image']
+    fields = ['title', 'body', 'featured_image']
 
 
 class DeletePostView(DeleteView):
