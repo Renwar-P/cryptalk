@@ -30,8 +30,8 @@
                 <p class="card-text">
                   {{ post.excerpt }}
                   <small {% if user.is_authenticated and user == post.author %}
-                    ><a href="{% url 'update_post' post.pk %}">(Edit)</a>
-                    <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
+                    ><a class="edit" href="{% url 'update_post' post.pk %}">(Edit)</a>
+                    <a class="edit" href="{% url 'delete_post' post.pk %}">(Delete)</a>
                     {% endif %}
                   </small>
                 </p>
