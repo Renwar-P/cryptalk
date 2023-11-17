@@ -183,6 +183,8 @@ body {
     flex: 1;
 }
 
+
+/* for the socialmedia links to have correct color */
 a {
 
     text-decoration: underline;
@@ -191,7 +193,7 @@ a {
 
 
 
-
+/* for the edit/delete links to have correct color */
 .edit {
 
     color: #445261;
