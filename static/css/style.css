@@ -151,12 +151,14 @@ body {
 .navbar {
 
     background-color: #063852;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 }
 
 
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .nav-link {
     color: #FFFFFF;
+
 }
 
 .brand {
@@ -166,10 +168,12 @@ body {
 
 .navbar-light .navbar-nav .nav-link {
     color: #FFFFFF;
+
 }
 
 .navbar-light .navbar-text {
     color: white;
+
 }
 
 .form_button {
