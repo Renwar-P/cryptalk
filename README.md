@@ -1,4 +1,4 @@
-#CryptoTalk
+CryptoTalk
 
 ![Responsive screenshot](static/images-readme/responsive.png)
 
@@ -30,6 +30,20 @@ A live version of this project can be found at this url: <>
     + [Footer](#footer-session "Footer")
     + [Sign In](#sign-in "Sign In")
     + [Sign Up session](#signup-session "Sign Up session")
+    - [Post session](#post-session "Post session")
     + [Edit session](#edit-session "Edit session")
     + [Comment session](#comment-session "Comment session")
-    + [Delete session](#delete-session "Delete session")
+    - [Delete session](#delete-session "Delete session")    
+    - [Sign Out](#sign-out "Sign Out")
+  - [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
+
++ [Languages used](#languages-used "Languages used")
+  - [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
+  - [Installed packages](#installed-packages "Installed packages")
+- [Testing](#testing "Testing")
+  - [Bugs during development](#bugs-during-development "Bugs during development")
+  - [Validator Testing](#validator-testing "Validator Testing")
+  - [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
+- [Deployment](#deployment "deployment")
+- [Content](#content "Content")
+- [Credits](#credits "Credits")
