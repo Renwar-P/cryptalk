@@ -238,31 +238,30 @@ Django is a python framework so most of the code is written in python. The part 
 In the development of this project I encountered several bugs. They are covered in the bugs section. 
 
 
-### Bugs 
+## Bugs 
 During development of this project I encountered several bugs. Some of them are covered here:
 
-  ## Directory issue with allauth. 
+  ### Directory issue with allauth. 
   When running the command ls ../.pip-modules/lib/ it told me that there is no such directory. I understood that I have a issue with the directory. I googled it and found a command to find the path to where python is installed. To do this I used the command "which python3". It gave me the path "/home/codeany/.pyenv/shims/python3". However this did not work. To make sure I hade really installed allauth I searched for a command to check this. I found the command "pip show django-allauth". This gave me info regarding the version of allauth installed and more. In the info I found another path to the directory "/home/codeany/.local/lib/python3.9/site-packages". I tried this path instead and followed the instructions in the video and it worked.
 '
 
-## Blocktrans
-In the login.html template there is an block of code   "<p>{% blocktrans %}Welcome to CryptoTalk. To leave a comment or like a post, please log in. If you
-        have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-        first.{% endblocktrans %}</p>"
+### Blocktrans
+In the login.html template there is an block of code   " <p>{% blocktrans %}Welcome to CryptoTalk. To leave a comment or like a post, please log in. If you
+have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>first.{% endblocktrans %}</p> "
 
 When running this code in the IDE it told me that a {%blocktrans%} cannot have a url path inside it. I removed the {%blocktrans%} tags and the problem was fixed.
 
-## Placeholder image
+### Placeholder image
 
 To change the placeholder image took a little longer then expected. My first thought was that I only needed to change the link in the index.html. However when i did this nothing happened. I tried severeal different images and it gave me the same result. I then understood that it was a Cloudinary issue. I logged in to my cloudinary and added the image to my library. After that it worked. 
 
-## Field required
+### Field required
 
 When as a admin I want to approve a comment, django required that the body field and the content field to be filled. This means that I had to copy the text in the content and adding it to the body field. To fix this I added the blank=True statement to the content field in Post class model. 
 
 
-### Unfixed bugs 
+## Unfixed bugs 
 
-## Automated testing
-I initiated the automated testing. I wanted to test with pythons unittest and to use jest for the little js code in the project. However I could not fix the import issue. When running the tests I got the message that its missing a parent directory and I couldn´t import the block of code I wanted tested. To resolve this I contacted the tutor support that Code Institute provides. That tutor couldn´t locate the problem. Considering the deadline and that its not required for this project, I decided to proceed with only manuel testing. 
+### Automated testing
+I initiated the automated testing. I wanted to test with pythons unittest and to use jest for the little js code in the project. However I could not fix the import issue. When running the tests I got the message that its missing a parent directory and I couldn´t import the block of code I wanted tested. To resolve this I contacted the tutor support that Code Institute provides. That tutor couldn´t locate the problem. Considering the deadline and that its not required for this project, I decided to proceed with only manual testing. 
 

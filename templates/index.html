@@ -12,12 +12,14 @@
               <div class="image-container">
                 {% if "placeholder" in post.featured_image.url %}
                 <img
-                  class="card-img-top"
-                  src="https://res.cloudinary.com/dr4zafv10/image/upload/v1700249683/wo1uxyxeoktpwziahtkr.jpg"
+                  class="card-img-top" alt="
+                  placeholder image" 
+                  src="https://res.cloudinary.com/dr4zafv10/image/upload/c_scale,w_284/v1700249683/wo1uxyxeoktpwziahtkr.jpg"
                 />
                 {% else %}
                 <img
-                  class="card-img-top"
+                  class="card-img-top" alt="
+                  placeholder image"
                   src=" {{ post.featured_image.url }}"
                 />
                 {% endif %}
