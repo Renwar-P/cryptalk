@@ -70,15 +70,14 @@ The following user stories has been implemented in the project. User Stories are
 
 As a **site admin** I can **create, read, update and delete posts** so that **I can manage my blog content**
 
-As a **course manager/admin** I can **view a list of mentors** so that **I can select one and connect the mentor to a student**
+As a **site user/admin** I can **view the number of likes on each post** so that **I can see wich is the most polular or viral**
 
-As a **course manager/admin** I can **view a list of mentors** so that **I can select one to read details, edit or delete the mentor if needed.**
+As a **admin** I can **create draft posts** so that **I can finish writing the content later.**
 
-As a **course manager/admin** I can **create a student profile** so that **I can add the student to a mentor**
+As a **admin** I can **approve or disapprove comments** so that **I can filter out objectionable comments**
 
-As a **course manager/admin** I can **view a list of students** so that **I can select one to read details, edit or delete the student if needed.**
+As a **site user/admin** I can **view comments on a individual post** so that **I can read the conversation**
 
-As a **course manager/admin** I can **select a student** so that **I can change the students selected mentor**
 
 #### User
 
@@ -86,18 +85,38 @@ As a **site user** I can **view a paginated list of posts** so that **I can easi
 
 As a **site user** I can **register an account** so that **I can comment and like**
 
-As a **mentor** I can **read a student profile** so that **I can see the students name, email and course start date and end date**
+As a **site user** I can **click on a post** so that **I can read the full text**
 
-As a **mentor** I can **see a list of sessions in the student profile** so that **I can see the ones that have been conducted**
+As a **site user** I can **leave comments on a post** so that **I can be involved in the conversation**
 
-As a **mentor** I can **create a session for a student** so that **I can write and save the date for the session, the duration of the session and add notes about the session**
+As a **site user** I can **like or unlike a post** so that **I can interact with the content**
 
-As a **mentor** I can **select session notes** so that **I can share them with the course manager**
+As a **site user** I can **view a list of posts** so that **I can select one to read**
 
-As a **mentor** I can **select a session** so that **I can edit the session details and delete it if necessary**
+As a **site user** I can **create posts** so that **I can participate in the conversation**
 
-As a **Mentor** I can **search for my students** so that **I can get quick and easy access to their profiles**
+As a **site user** I can **edit my posts** so that **having the flexibility to change the content**
 
-As a **Mentor** I can **log the time I spent on a session** so that **I can get total time spent on students**
+As a **site user** I can **delete posts** so that **being able to delete unwanted posts**
 
-As a **Mentor** I can **visit my profile page** so that **I can see the total time I spent on sessions**
+As a **site user** I can **delete/edit posts** so that **only I can delete/edit my own posts**
+
+
+
+### Project Purpose
+
+From Code Institutes assessment guide:
+
+In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
+
+### Design diagram
+
+The idea of behind CryptoTalk´s design is simplicity. My main focus here was to implement CRUD and to get the django elemnts working. 
+
+![Wireframe1](static/images-readme/home-bals.png)
+![Wireframe2](static/images-readme/signup-bals.png)
+![Wireframe3](static/images-readme/signup-bals.png)
+
+### Site navigation
+
+![Site navigation](static/images-readme/SITE_NAVIGATION.png)
