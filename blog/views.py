@@ -82,6 +82,16 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+""" the inspiration behind this codeblock came from [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners.
+https://stackoverflow.com/questions/54415181/django-add-post-id-to-the-slug-only-if-it-already-exists
+Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog. 
+
+"""
+
+
+
+
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
@@ -93,10 +103,28 @@ class AddPostView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+""" the inspiration behind this codeblock came from 
+Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog. 
+
+
+
+"""
+
+
 class UpdatePostView(UpdateView):
     model = Post
     template_name = 'update_post.html'
     fields = ['title', 'body', 'featured_image']
+
+
+""" the inspiration behind this codeblock came from 
+
+
+Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog. 
+
+"""
 
 
 class DeletePostView(DeleteView):

@@ -1,6 +1,6 @@
-CryptoTalk
+# CryptoTalk
 
-![Responsive screenshot](https://renwar-p.github.io/cryptalk)
+![Responsive screenshot](static/images-readme/responsive.png)
 
 # The purpose with this project
 
@@ -12,30 +12,63 @@ Required technologies for this project:
 - HTML, CSS, JavaScript, Python+Django
 - Relational database (SQL)
 
-A live version of this project can be found at this url: <>
+A live version of this project can be found at this url: <https://cryptalk-32183a196317.herokuapp.com/>
 
 
 # Table of Content
 
-- [UX](#ux "UX")
-  - [User Demographic](#user-demographic "User Demographic")
-  - [User Goals](#user-goals "User goals")
-  - [User Stories](#user-stories "User Stories")
-- [Project Purpose](#project-purpose "Project Purpose")
-  - [Design diagram](#design-diagram "Design diagram")
-  - [Site Navigation](#site-navigation "Site Navigation")
-- [Features](#features "Features")
-  - [Existing Features](#existing-features "Existing Features")
-    + [Navbar](#navbar-session "Navbar")
-    + [Footer](#footer-session "Footer")
-    + [Sign In](#sign-in "Sign In")
-    + [Sign Up session](#signup-session "Sign Up session")
-    - [Post session](#post-session "Post session")
-    + [Edit session](#edit-session "Edit session")
-    + [Comment session](#comment-session "Comment session")
-    - [Delete session](#delete-session "Delete session")    
-    - [Sign Out](#sign-out "Sign Out")
-  - [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
+- [CryptoTalk](#cryptotalk)
+- [The purpose with this project](#the-purpose-with-this-project)
+- [Table of Content](#table-of-content)
+  - [UX](#ux)
+    - [User Demographic](#user-demographic)
+    - [User Goals](#user-goals)
+    - [User Stories](#user-stories)
+      - [Admin](#admin)
+      - [User](#user)
+    - [Project Purpose](#project-purpose)
+    - [Design diagram](#design-diagram)
+    - [Site navigation](#site-navigation)
+  - [Features](#features)
+    - [Existing Features](#existing-features)
+      - [Home](#home)
+      - [Navbar](#navbar)
+      - [Sign Up](#sign-up)
+      - [Login](#login)
+      - [Logout](#logout)
+      - [Add Post](#add-post)
+      - [PostDetailView](#postdetailview)
+      - [Edit](#edit)
+      - [Delete](#delete)
+      - [Comment](#comment)
+      - [Footer](#footer)
+  - [Features left to implement](#features-left-to-implement)
+  - [Languages used](#languages-used)
+    - [Frameworks, libraries and tools](#frameworks-libraries-and-tools)
+    - [Installed packages](#installed-packages)
+  - [Testing](#testing)
+  - [Bugs](#bugs)
+    - [Directory issue with allauth.](#directory-issue-with-allauth)
+    - [Blocktrans](#blocktrans)
+    - [Placeholder image](#placeholder-image)
+    - [Field required](#field-required)
+    - [Deployment](#deployment)
+  - [Unfixed bugs](#unfixed-bugs)
+    - [Automated testing](#automated-testing)
+    - [Validator Testing](#validator-testing)
+  - [Deployment](#deployment-1)
+  - [Credits](#credits)
+    - [Home](#home-1)
+    - [Navbar](#navbar-1)
+    - [Footer](#footer-1)
+    - [Sign Up](#sign-up-1)
+    - [Login](#login-1)
+    - [Logout](#logout-1)
+    - [Add post](#add-post-1)
+    - [PostDetailView](#postdetailview-1)
+    - [Edit](#edit-1)
+    - [Delete](#delete-1)
+    - [Comment](#comment-1)
 
 + [Languages used](#languages-used "Languages used")
   - [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
@@ -56,8 +89,8 @@ A live version of this project can be found at this url: <>
 
 This application is ment for:
 
-- Everyone interested in crypto. 
-
+- Everyone with a interest in cryptonews
+  
 ### User Goals
 
 To create a user friendly website that is appealing. To create a website for cryptoentusiasts to share the latest news and with that stay ahead of the curve.  
@@ -201,7 +234,7 @@ The sites footer is located in the bottom of the page. It contains socialmedia-l
 - Javascript
 - Python
 - Django
-- SQL - Postgres
+- SQL 
 
 ### Frameworks, libraries and tools
 
@@ -233,10 +266,11 @@ The sites footer is located in the bottom of the page. It contains socialmedia-l
 ## Testing 
 All testing in this project has been done manually during the development process, the project has not followed the principles of test driven development. Testing has for the most part followed the track of the user stories. Everytime a user story is concluded testing has been done to make sure the new feature is working. This has been done by simply clicking on the buttons/links and testing all the functions to see if it produced the desired outcome. All the functions in the project are working. 
 
-Django is a python framework so most of the code is written in python. The part of the code that is in js is the alert messages. They work as expected. CryptoTalk has today no socialmedia so the links go to their respective homepages. 
+Django is a python framework so most of the code is written in python. The part of the code that is in js is the alert messages. They work as expected. CryptoTalk has today no socialmedia today so the links go to their respective homepages.
+
+Because this project was developed with Bootstrap it is fully responsive on all screen sizes.  
 
 In the development of this project I encountered several bugs. They are covered in the bugs section. 
-
 
 ## Bugs 
 During development of this project I encountered several bugs. Some of them are covered here:
@@ -260,6 +294,10 @@ To change the placeholder image took a little longer then expected. My first tho
 When as a admin I want to approve a comment, django required that the body field and the content field to be filled. This means that I had to copy the text in the content and adding it to the body field. To fix this I added the blank=True statement to the content field in Post class model. 
 
 
+### Deployment
+
+When deploying the project to heroku I encountered a problem. Heroku gave me the message "Bad Request 404". To get a more detailed errormessage I switched the DEBUG to  DEBUG = 'DEBUG' in os.environ. I also added DEBUG to confug vars in heroku. Heroku gave me the erromessage that I need to add a link <https://cryptalk-32183a196317.herokuapp.com> to ALLOWED_HOSTS. But it was already added from earlier. After contacting tutorsupport I was told to put the hosts in one list. I did so and heroku loaded the app. However now without the css. I deleted the DEBUG config vars and the app rendered as expected. 
+
 ## Unfixed bugs 
 
 ### Automated testing
@@ -269,7 +307,7 @@ I initiated the automated testing. I wanted to test with pythons unittest and to
 
 Testing with <https://validator.w3.org/> shows errors in html:
 
-The errors shown are related to the templates from the "I think therefore I blog" walkthrough project. Some of the errors are regarding too long lines and come from the django templates. Thats why I can´t produce a clean slate of no errors in the html. The errors don´t effect functionality
+The errors shown are related to the templates from the "I think therefore I blog" walkthrough project. Some of the errors are regarding too long lines and come from the django templates. And some of the errors always appear when saved. Thats why I can´t produce a clean slate of no errors in the html. The errors don´t effect functionality.
 
 
 Testing with lighthouse gives the following results:
@@ -281,7 +319,7 @@ Testing with <https://www.pythonchecker.com/>
 Testing the pythonchecker.com came back with good results. Testing the base.html file came back 100% no errors. Testing the other python files came back with minor errors such as "whitespaces around operators" and "add two empty lines in front of function". Nothing that effects functionality.  
 
 
-Testing with <https://jigsaw.w3.org/css-validator/> shown no errors on CSS:
+Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 
 ![Validator testing](static/images-readme/css-validator.png)
 
@@ -298,12 +336,12 @@ Before deploying to Heroku there where a couple of steps.
 - The debug was set to: False
 - In the settings.py file on line was added: X_FRAME_OPTIONS : 'SAMEORIGIN'
 - On herokus website in the config vars settings I removed the: DISABLE_COLLECTSTATIC  : 1
-- Last I clicked the deploy-button
+- Last I clicked the deploy-button.
 
 
 All values was provided by Heroku and I used env.py to store the values for my project and used the variables for the values in settings.py for the Database url and secret key. Heroku also needs to be set as an allowed host in settings.py. 
 
-After those steps were taken the application was deployed at the following link:
+After those steps were taken the application was deployed at the following link: <https://cryptalk-32183a196317.herokuapp.com/>
 
 
 ## Credits
@@ -318,8 +356,49 @@ I have utilised many websites for the development of this project. Here are some
 - [Codemy](https://codemy.com/) - Django Blog
 - [Python Tutor](https://pythontutor.com/)
 - [Tech with Tim](https://www.youtube.com/watch?v=nGIg40xs9e4) - Learn Django in 20 minutes
-- [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners
+- [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners.
+
+Here is a list of the features in the projected and the code that inspired them. 
+
+### Home
+The template for the homepage was taken from the "I think therefore I Blog" walkthrough project. I kept the navbar and footer. I styled them with my own colors. 
+
+### Navbar
+The template for the navbar was taken from the "I think therefore I Blog" walkthrough project.
+The styling of the navbar is all me. 
+
+### Footer
+The template for the footer was taken from the "I think therefore I Blog" walkthrough project.
+The styling of the footer is all me.
+
+### Sign Up
+The template for the signup page was taken from the "I think therefore I Blog" walkthrough project. 
+
+### Login
+The template for the login page was taken from the "I think therefore I Blog" walkthrough project.
 
 
-Different sources have helped me on the features in this project.   
- 
+### Logout
+The template for the logout page was taken from the "I think therefore I Blog" walkthrough project.
+
+### Add post
+The template/code for the add post page was inspired by [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners and by - [Codemy](https://codemy.com/) - Django Blog.
+
+### PostDetailView
+
+The template for the postdetailview is taken from the "I think therefore I Blog" walkthrough project.
+
+
+### Edit
+The template/code for the edit post page was inspired by [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog. The "I think therefore I Blog" walkthrough project.
+
+
+### Delete
+The template/code for the delete post page was inspired by [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog. 
+The "I think therefore I Blog" walkthrough project.
+
+
+### Comment
+The template for the comment page is taken from the "I think therefore I Blog" walkthrough project.
