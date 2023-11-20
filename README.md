@@ -265,3 +265,61 @@ When as a admin I want to approve a comment, django required that the body field
 ### Automated testing
 I initiated the automated testing. I wanted to test with pythons unittest and to use jest for the little js code in the project. However I could not fix the import issue. When running the tests I got the message that its missing a parent directory and I couldn´t import the block of code I wanted tested. To resolve this I contacted the tutor support that Code Institute provides. That tutor couldn´t locate the problem. Considering the deadline and that its not required for this project, I decided to proceed with only manual testing. 
 
+### Validator Testing
+
+Testing with <https://validator.w3.org/> shows errors in html:
+
+The errors shown are related to the templates from the "I think therefore I blog" walkthrough project. Some of the errors are regarding too long lines and come from the django templates. Thats why I can´t produce a clean slate of no errors in the html. The errors don´t effect functionality
+
+
+Testing with lighthouse gives the following results:
+
+![Validator testing](static/images-readme/lighthouse.png)
+
+Testing and validating using pep8 validations tools:
+Testing with <https://www.pythonchecker.com/>
+Testing the pythonchecker.com came back with good results. Testing the base.html file came back 100% no errors. Testing the other python files came back with minor errors such as "whitespaces around operators" and "add two empty lines in front of function". Nothing that effects functionality.  
+
+
+Testing with <https://jigsaw.w3.org/css-validator/> shown no errors on CSS:
+
+![Validator testing](static/images-readme/css-validator.png)
+
+
+## Deployment
+
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+The project was developed using Codeanywhere with regular commits to Github. In order to deploy to Heroku a requirements.txt file needs to be created
+and it is important that the database is created in Heroku so that the database can be migrated before actual deployment.
+
+Before deploying to Heroku there where a couple of steps. 
+
+- The debug was set to: False
+- In the settings.py file on line was added: X_FRAME_OPTIONS : 'SAMEORIGIN'
+- On herokus website in the config vars settings I removed the: DISABLE_COLLECTSTATIC  : 1
+- Last I clicked the deploy-button
+
+
+All values was provided by Heroku and I used env.py to store the values for my project and used the variables for the values in settings.py for the Database url and secret key. Heroku also needs to be set as an allowed host in settings.py. 
+
+After those steps were taken the application was deployed at the following link:
+
+
+## Credits
+
+- The colors choosen in this project come from <https://www.canva.com/learn/100-color-combinations/> - Day & Night
+
+I have utilised many websites for the development of this project. Here are some of them. 
+
+- [W3 Schools](https://www.w3schools.com) for helping me understand Django.
+- [Code Institute](https://codeinstitute.net/) for all course material leading up to this project.
+- [Stack Overflow](https://stackoverflow.com/) for hours of searching and troubleshooting.
+- [Codemy](https://codemy.com/) - Django Blog
+- [Python Tutor](https://pythontutor.com/)
+- [Tech with Tim](https://www.youtube.com/watch?v=nGIg40xs9e4) - Learn Django in 20 minutes
+- [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners
+
+
+Different sources have helped me on the features in this project.   
+ 
