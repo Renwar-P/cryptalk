@@ -97,6 +97,9 @@ class AddPostView(LoginRequiredMixin, CreateView):
     template_name = 'add_post.html'
     fields = ['title', 'body', 'featured_image', 'coin_type',]
 
+
+  
+
     def form_valid(self, form):
 
         form.instance.author_id = self.request.user.id
