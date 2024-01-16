@@ -9,13 +9,23 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import dotenv
 
-from pathlib import Path
+dotenv.load_dotenv()
+
 import os
+from pathlib import Path
+
+import cloudinary
+import cloudinary_storage
+
 import dj_database_url
 from django.contrib.messages import constants as messages
+
 if os.path.isfile('env.py'):
     import env
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -27,12 +37,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+DEBUG = False
 
 X_FRAME_OPTIONS: 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['cryptalk-32183a196317.herokuapp.com',
-                 '8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com', 'localhost']
+                 '8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com', '8000-renwarp-cryptalk-b3fesog455f.ws-eu107.gitpod.io', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -113,8 +123,11 @@ WSGI_APPLICATION = 'cryptalk.wsgi.application'
 #     }
 # }
 
+database_url="postgres://xkjieklm:ScW9-QnjtC7aaoYqFfqUkZfMF6eu3Wfi@cornelius.db.elephantsql.com/xkjieklm"
+
+
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(database_url)
 }
 
 
@@ -153,6 +166,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'Renwar',
+    'API_KEY': '115142556588679',
+    'API_SECRET': '4-Et9LkiL-mOkrTeXBeL9hoWa3A',
+}
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

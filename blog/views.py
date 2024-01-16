@@ -95,7 +95,7 @@ Python Django Web Framework - Full Course for Beginners.
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'body', 'featured_image']
+    fields = ['title', 'body', 'featured_image', 'coin_type',]
 
     def form_valid(self, form):
 
