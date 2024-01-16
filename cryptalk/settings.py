@@ -169,7 +169,7 @@ USE_TZ = True
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'Renwar',
+    'CLOUD_NAME': 'Untitled',
     'API_KEY': '115142556588679',
     'API_SECRET': '4-Et9LkiL-mOkrTeXBeL9hoWa3A',
 }
