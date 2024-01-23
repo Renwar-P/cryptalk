@@ -2,11 +2,12 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, CoinTypeForm
 from django.views.generic import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import UpdateView, DeleteView
 from django.urls import reverse_lazy
+ 
 
 
 class PostList(generic.ListView):
@@ -22,9 +23,13 @@ class PostDetail(View):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
+        comment_form = CommentForm()
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
+
+        
+        coin_type_form = CoinTypeForm(instance=post.coin_type)
 
         return render(
             request,
@@ -34,12 +39,12 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
+                "coin_type_form": coin_type_form
             },
         )
 
     def post(self, request, slug, *args, **kwargs):
-
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -57,6 +62,9 @@ class PostDetail(View):
         else:
             comment_form = CommentForm()
 
+        
+        coin_type_form = CoinTypeForm(instance=post.coin_type)
+
         return render(
             request,
             "post_detail.html",
@@ -65,10 +73,10 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
-                "liked": liked
+                "liked": liked,
+                "coin_type_form": coin_type_form,
             },
         )
-
 
 class PostLike(View):
 
@@ -95,16 +103,22 @@ Python Django Web Framework - Full Course for Beginners.
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'body', 'featured_image', 'coin_type',]
+    fields = ['title', 'body', 'featured_image']
 
-
-  
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['coin_type_form'] = CoinTypeForm()
+        return context
 
     def form_valid(self, form):
-
         form.instance.author_id = self.request.user.id
-        return super().form_valid(form)
 
+        coin_type_form = CoinTypeForm(self.request.POST)
+        if coin_type_form.is_valid():
+            form.instance.coin_type = coin_type_form.save()
+
+        return super().form_valid(form)
+    
 
 """ the inspiration behind this codeblock came from 
 Python Django Web Framework - Full Course for Beginners.
