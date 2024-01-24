@@ -11,9 +11,7 @@ class CommentForm(forms.ModelForm):
 
 class CoinTypeForm(forms.ModelForm):
 
-
-
-    coin_type = [
+    COIN_CHOICES = [
         ('BTC', 'Bitcoin'),
         ('LTC', 'Litecoin'),
         ('DOGE', 'Dogecoin'),
@@ -24,16 +22,9 @@ class CoinTypeForm(forms.ModelForm):
         ('TRX', 'Tron'),
         ('NXT', 'Nxt'),
         ('DASH', 'Dash'),
-
-
-
-
     ]
 
-    name = forms.ChoiceField(choices=coin_type, label='Cryptocurrency')
-
-
-
+    name = forms.ChoiceField(choices=COIN_CHOICES, label='Cryptocurrency')
 
     class Meta:
         model = CoinType

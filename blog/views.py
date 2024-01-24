@@ -77,7 +77,6 @@ class PostDetail(View):
                 "coin_type_form": coin_type_form,
             },
         )
-
 class PostLike(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -103,22 +102,11 @@ Python Django Web Framework - Full Course for Beginners.
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'body', 'featured_image']
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['coin_type_form'] = CoinTypeForm()
-        return context
+    fields = ['title', 'body', 'featured_image', 'coin_type']
 
     def form_valid(self, form):
-        form.instance.author_id = self.request.user.id
-
-        coin_type_form = CoinTypeForm(self.request.POST)
-        if coin_type_form.is_valid():
-            form.instance.coin_type = coin_type_form.save()
-
+        form.instance.author = self.request.user
         return super().form_valid(form)
-    
 
 """ the inspiration behind this codeblock came from 
 Python Django Web Framework - Full Course for Beginners.
@@ -129,11 +117,14 @@ Python Django Web Framework - Full Course for Beginners.
 """
 
 
-class UpdatePostView(UpdateView):
+class UpdatePostView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'update_post.html'
-    fields = ['title', 'body', 'featured_image']
+    fields = ['title', 'body', 'featured_image', 'coin_type']
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 """ the inspiration behind this codeblock came from 
 
