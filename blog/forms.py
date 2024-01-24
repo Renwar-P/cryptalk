@@ -8,24 +8,18 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
         
 
-
 class CoinTypeForm(forms.ModelForm):
-
-    COIN_CHOICES = [
-        ('BTC', 'Bitcoin'),
-        ('LTC', 'Litecoin'),
-        ('DOGE', 'Dogecoin'),
-        ('XRP', 'Ripple'),
-        ('ETH', 'Ethereum'),
-        ('ADA', 'Cardano'),
-        ('SHIB', 'Shiba Inu'),
-        ('TRX', 'Tron'),
-        ('NXT', 'Nxt'),
-        ('DASH', 'Dash'),
-    ]
-
-    name = forms.ChoiceField(choices=COIN_CHOICES, label='Cryptocurrency')
-
     class Meta:
         model = CoinType
         fields = ['name']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        coin_choices = CoinType.objects.values_list('name', 'name')
+        self.fields['name'].choices = coin_choices
+
+
+
+
+
+
