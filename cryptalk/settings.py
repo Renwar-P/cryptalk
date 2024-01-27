@@ -37,7 +37,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 X_FRAME_OPTIONS: 'SAMEORIGIN'
 
@@ -172,6 +172,7 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dr4zafv10',
     'API_KEY': '115142556588679',
     'API_SECRET': '4-Et9LkiL-mOkrTeXBeL9hoWa3A',
+
 }
 
 MEDIA_URL = '/media/'
@@ -186,3 +187,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+

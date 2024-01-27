@@ -7,8 +7,15 @@ from django.views.generic import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.contrib.auth import login
+from .models import AuthorImage
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
+from .forms import AuthorImageForm
+from django.contrib.auth import login
 
- 
+
+
 
 
 class PostList(generic.ListView):
@@ -103,7 +110,7 @@ Python Django Web Framework - Full Course for Beginners.
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'body', 'featured_image', 'coin_type']
+    fields = ['title', 'body', 'featured_image', 'coin_type', 'author_image']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -142,13 +149,4 @@ class DeletePostView(DeleteView):
     success_url = reverse_lazy('home')
 
 
-
-class ImageView(View):
-    model = Post
-    template_name = 'signup.html'
-    fields = ['author_image']
-
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        return super().form_valid(form)
 
