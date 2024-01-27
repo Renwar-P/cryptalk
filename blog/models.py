@@ -17,6 +17,15 @@ class CoinType(models.Model):
         return self.name
 
 
+
+class AuthorImage(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='author_images/', blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username
+
+
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     body = models.TextField(default='')
@@ -26,6 +35,9 @@ class Post(models.Model):
     )
     featured_image = CloudinaryField('image', default='placeholder')
     coin_type = models.ForeignKey(CoinType, on_delete=models.SET_NULL, null=True, blank=True)
+    author_image = models.OneToOneField(
+        'blog.AuthorImage', on_delete=models.SET_NULL, null=True, blank=True
+    )
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField(blank=True)
