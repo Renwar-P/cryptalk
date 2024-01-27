@@ -7,6 +7,7 @@ from django.views.generic import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import UpdateView, DeleteView
 from django.urls import reverse_lazy
+
  
 
 
@@ -139,3 +140,15 @@ class DeletePostView(DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+
+
+
+class ImageView(View):
+    model = Post
+    template_name = 'signup.html'
+    fields = ['author_image']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+

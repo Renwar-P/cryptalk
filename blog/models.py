@@ -20,7 +20,7 @@ class CoinType(models.Model):
 
 class AuthorImage(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='author_images/', blank=True, null=True)
+    image = CloudinaryField('image', blank=True, null=True)
 
     def __str__(self):
         return self.user.username
