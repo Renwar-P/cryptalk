@@ -35,9 +35,7 @@ class Post(models.Model):
     )
     featured_image = CloudinaryField('image', default='placeholder')
     coin_type = models.ForeignKey(CoinType, on_delete=models.SET_NULL, null=True, blank=True)
-    author_image = models.OneToOneField(
-        'blog.AuthorImage', on_delete=models.SET_NULL, null=True, blank=True
-    )
+    author_image = CloudinaryField('image', default='placeholder', blank=True, null=True)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField(blank=True)

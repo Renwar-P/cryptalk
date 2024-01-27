@@ -37,7 +37,13 @@
                     <a class="edit" href="{% url 'delete_post' post.pk %}">(Delete)</a>
                     {% endif %}
                   </small>
-                </p>
+
+                  <div class="author_img"> <img src="{{ post.author_image.image.url }}">
+
+
+
+                  </div>
+                
               </a>
               <hr />
               <p class="card-text text-muted h6">
