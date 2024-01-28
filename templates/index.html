@@ -46,7 +46,21 @@
 
 
                   </div>
-                
+                  {% if "placeholder" in post.featured_image.url %}
+                  <img
+                    class="author-img" alt="
+                    placeholder image" 
+                    src="https://res.cloudinary.com/dr4zafv10/image/upload/v1706462089/static/images/default.d6d71bced5a9.jpg.jpg"
+                    width="10%"
+                    height="10%"
+                  />
+                  {% else %}
+                  <img
+                    class="author-img" alt="
+                    placeholder image"
+                    src=" {{ post.author_image.url }}"
+                  />
+                  {% endif %}
               </a>
               <hr />
               <p class="card-text text-muted h6">
