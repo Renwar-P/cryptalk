@@ -20,6 +20,8 @@ class CoinTypeForm(forms.ModelForm):
         self.fields['name'].choices = coin_choices
 
 class AuthorImageForm(forms.ModelForm):
+    
+    image = forms.ImageField()
     class Meta:
         model = AuthorImage
         fields = ['image']

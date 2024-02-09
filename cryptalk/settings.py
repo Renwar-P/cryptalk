@@ -16,9 +16,6 @@ dotenv.load_dotenv()
 import os
 from pathlib import Path
 
-import cloudinary
-import cloudinary_storage
-
 import dj_database_url
 from django.contrib.messages import constants as messages
 
@@ -37,12 +34,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS: 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['cryptalk-32183a196317.herokuapp.com',
-                 '8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com', '8000-renwarp-cryptalk-b3fesog455f.ws-eu107.gitpod.io', '127.0.0.1', 'localhost']
+                 '8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com', '8000-renwarp-cryptalk-b3fesog455f.ws-eu108.gitpod.io', '127.0.0.1', 'localhost']
 
 
 # Application definition
