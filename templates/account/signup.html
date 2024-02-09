@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}  
 {% load i18n %} {% block head_title %} {% trans "Signup" %}
 {% endblock %}
 
@@ -27,8 +27,7 @@
         {{ form.as_p }}
         
        
-        <label for="id_image">{% trans "Profile Image" %}</label>
-        <input type="file" name="author_image" id="id_author_image">
+      
 
         {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">

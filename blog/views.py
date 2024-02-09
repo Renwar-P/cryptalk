@@ -104,13 +104,20 @@ Python Django Web Framework - Full Course for Beginners.
 
 """
 
+class SignUpView(LoginRequiredMixin, CreateView):
+    model = Post
+    template_name = 'signup.html'
+   
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
 
 
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'body', 'featured_image', 'coin_type', 'author_image']
+    fields = ['title', 'body', 'featured_image', 'coin_type']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
