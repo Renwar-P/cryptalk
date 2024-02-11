@@ -21,11 +21,16 @@
         id="signup_form"
         method="post"
         action="{% url 'account_signup' %}"
-        enctype="multipart/form-data" 
-      >
+        enctype="multipart/form-data" >
+
+      <label for="id_image">Profile Image:</label>
+      <input id="id_image" type="file" name="image" required>
+     
+     
+      
         {% csrf_token %}
         {{ form.as_p }}
-        
+        {{ author_image_form.as_p }}
        
       
 
@@ -35,8 +40,16 @@
         <button class="btn btn-signup right" type="submit">
           {% trans "Sign Up" %} &raquo;
         </button>
+
+        
       </form>
+
+   
     </div>
+
+  
   </div>
+
+  
 </div>
 {% endblock %}

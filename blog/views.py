@@ -107,6 +107,8 @@ Python Django Web Framework - Full Course for Beginners.
 class SignUpView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'signup.html'
+    fields = ['author_image']
+    author_image_form = AuthorImageForm()
    
 
     def form_valid(self, form):
