@@ -12,12 +12,14 @@
               <div class="image-container">
                 {% if "placeholder" in post.featured_image.url %}
                 <img
+                style="width: 300px; height: 200px;"
                   class="card-img-top" alt="
                   placeholder image" 
                   src="https://res.cloudinary.com/dr4zafv10/image/upload/c_scale,w_284/v1700249683/wo1uxyxeoktpwziahtkr.jpg"
                 />
                 {% else %}
                 <img
+                style="width: 300px; height: 200px;"
                   class="card-img-top" alt="
                   placeholder image"
                   src=" {{ post.featured_image.url }}"
@@ -44,12 +46,16 @@
     class="author-img" 
     alt="placeholder image" 
     src="https://res.cloudinary.com/dr4zafv10/image/upload/v1706462089/static/images/default.d6d71bced5a9.jpg.jpg"
-    width="10%"
-    height="10%"
+    width="40px"
+    height="40px"
+    style="border-radius: 20px;"
   /> 
 {% else %}
   <img
     class="author-img" 
+    width="40px"
+    height="40px"
+    style="border-radius: 20px;"
     alt="placeholder image"
     src="{{ post.author_image.url }}"
   />
