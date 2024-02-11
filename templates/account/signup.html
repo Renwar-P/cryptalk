@@ -22,15 +22,15 @@
         method="post"
         action="{% url 'account_signup' %}"
         enctype="multipart/form-data" >
-
-      <label for="id_image">Profile Image:</label>
-      <input id="id_image" type="file" name="image" required>
+       
+        <label style="padding-bottom: 10px;" for="id_image">Profile Image:</label>
+        <input id="id_image" type="file" name="image" required>
      
      
       
         {% csrf_token %}
         {{ form.as_p }}
-        {{ author_image_form.as_p }}
+        
        
       
 
