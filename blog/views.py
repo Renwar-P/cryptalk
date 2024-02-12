@@ -3,9 +3,8 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm, CoinTypeForm, AuthorImageForm
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.contrib.auth import login
 from .models import AuthorImage
@@ -127,7 +126,7 @@ Python Django Web Framework - Full Course for Beginners.
 class UpdatePostView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'update_post.html'
-    fields = ['title', 'body', 'featured_image', 'coin_type']
+    fields = ['title', 'body', 'featured_image', 'coin_type', 'author_image']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
