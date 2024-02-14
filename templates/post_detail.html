@@ -128,7 +128,7 @@
         <p>Posting as: {{ user.username }}</p>
         <form method="post" style="margin-top: 1.3em">
           {{ comment_form | crispy }} {% csrf_token %}
-          <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+          <button style="margin-top: 10px;" type="submit" class="btn btn-signup btn-lg">Submit</button>
         </form>
         {% endif %} {% endif %}
       </div>

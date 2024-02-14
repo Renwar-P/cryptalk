@@ -141,7 +141,7 @@ Python Django Web Framework - Full Course for Beginners.
 """
 
 
-class DeletePostView(DeleteView):
+class DeletePostView(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
