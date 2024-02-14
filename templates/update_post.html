@@ -1,22 +1,21 @@
-
-{% extends 'base.html' %} {% block content %}
 <!DOCTYPE html>
+{% extends 'base.html' %} {% block content %}
+
 <div class="container">
   <h1>Edit your post</h1>
-  <br /><br />
+  
 
   <form method="POST" enctype="multipart/form-data">
     {% csrf_token %} 
     {{form.as_p}}
     {{ coin_type_form.as_p }}
-    <p>Edit your profile picture</p>
+    <p>Update your profile picture</p>
 
    
    
   
-    <br /><br />
     
-    <button style="width: 100px; margin-bottom: 20px;" class="btn-signup btn-large">Edit</button>
+    <button style="width: 100px; margin-bottom: 20px;" class="btn-signup btn-lg">Edit</button>
   </form>
 </div>
 
