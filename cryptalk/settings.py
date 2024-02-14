@@ -185,5 +185,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SESSION_COOKIE_AGE = 900
 
+SESSION_SAVE_EVERY_REQUEST = True
 
