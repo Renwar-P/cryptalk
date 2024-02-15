@@ -1,14 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
   <h1>Delete post</h1>
-  <br /><br />
+ 
   <h3>Delete: {{ post.title }}</h3>
   <div class="form-group">
     <form method="POST">
       {% csrf_token %}
 
-      <br /><br />
+     
       <h5>Are you sure...?</h5>
       <button class="btn-signup btn-large">Delete</button>
     </form>
@@ -16,3 +26,7 @@
 </div>
 
 {% endblock %}
+</body>
+</html>
+
+
