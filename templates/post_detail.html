@@ -28,12 +28,13 @@
         {% if "placeholder" in post.featured_image.url %}
         <img
           src="https://res.cloudinary.com/dr4zafv10/image/upload/c_scale,w_284/v1700249683/wo1uxyxeoktpwziahtkr.jpg"
-          width="700px"
-          height="300px"
+          width="700"
+          height="300"
           alt="the placeholder image"
         >
         {% else %}
-        <img src="{{ post.featured_image.url }}" width="100%" alt="the featured image">
+        <img src=" post.featured_image.url " width="100" alt="the featured image">
+
         {% endif %}
       </div>
     </div>
@@ -52,11 +53,8 @@
             
               {% if user.is_authenticated %}
 
-              <form
-                class="d-inline"
-                action="{% url 'post_like' post.slug %}"
-                method="POST"
-              >
+              <form class="d-inline" action="url'post_like'post.slug" method="POST">
+
                 {% csrf_token %} {% if liked %}
                 <button
                   type="submit"

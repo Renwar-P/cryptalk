@@ -204,5 +204,12 @@ a {
     color: #445261;
 }
 
+.author-img {
 
+
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    z-index: 2;
+}
 
