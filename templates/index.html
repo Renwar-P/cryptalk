@@ -1,12 +1,18 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
 </head>
 <body>
+
   {% extends "base.html" %} 
+  {% load static %}
   {% block content %}
 
   <div class="container-fluid">
@@ -39,10 +45,9 @@
                   {% if "placeholder" in post.author_image.url %}
                   <img class="author-img" alt="placeholder image" 
                     src="https://res.cloudinary.com/dr4zafv10/image/upload/v1706462089/static/images/default.d6d71bced5a9.jpg.jpg"
-                    width="40px" height="40px" style="border-radius: 20px;">
+                    >
                   {% else %}
-                  <img class="author-img" width="40px" height="40px"
-                    style="border-radius: 20px;" alt="placeholder image"
+                  <img class="author-img" alt="placeholder image"
                     src="{{ post.author_image.url }}">
                   {% endif %}
                   <!-- Post details -->
@@ -52,7 +57,7 @@
                     {{post.coin_type.name}} -  {{post.coin_type.description}}
                   </p>
                 </a>
-                <hr>
+                
                 <!-- Edit and delete options -->
                 {% if user.is_authenticated and user == post.author %}
                 <div class="post-actions">
@@ -61,7 +66,9 @@
                     <a class="edit" href="{% url 'delete_post' post.pk %}">(Delete)</a>
                   </small>
                 </div>
+                
                 {% endif %}
+                <hr>
               </div>
             </div>
           </div>
