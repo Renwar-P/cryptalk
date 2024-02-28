@@ -28,6 +28,7 @@ A live version of this project can be found at this url: <https://cryptalk-32183
       - [User](#user)
     - [Project Purpose](#project-purpose)
     - [Design diagram](#design-diagram)
+    - [Database scheme](#design-diagram)
     - [Site navigation](#site-navigation)
   - [Features](#features)
     - [Existing Features](#existing-features)
@@ -149,6 +150,11 @@ The idea of behind CryptoTalk´s design is simplicity. My main focus here was to
 ![Wireframe1](static/images-readme/home-bals.png)
 ![Wireframe2](static/images-readme/signup-bals.png)
 ![Wireframe3](static/images-readme/signup-bals.png)
+
+
+### Database scheme
+![Database](static/images-readme/database_scheme.png)
+
 
 ### Site navigation
 
