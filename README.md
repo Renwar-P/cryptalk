@@ -153,7 +153,7 @@ The idea of behind CryptoTalk´s design is simplicity. My main focus here was to
 
 
 ### Database scheme
-![Database](static/images-readme/database_scheme.png)
+![Database](static/images-readme/Project4-Database.jpg)
 
 
 ### Site navigation
