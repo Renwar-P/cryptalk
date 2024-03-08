@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,7 @@
       <div class="col-12 mt-3 left">
         <div class="row">
           {% for post in post_list %}
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6 mb-4">
             <div class="card mb-4">
               <div class="card-body">
                 <div class="image-container">
@@ -55,7 +54,7 @@
                   <!-- Post details -->
                   <p class="card-text text-muted h6">
                     {{ post.created_on}} -
-                    <i class="far fa-heart"></i> {{post.number_of_likes }} |
+                    <i class="far fa-heart"></i> | {{post.number_of_likes }} |
                     {{post.coin_type.name}} | {{post.coin_type.description}} | {{post.coin_type.max_cap}}
                   </p>
                 </a>
