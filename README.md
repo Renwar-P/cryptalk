@@ -1,6 +1,6 @@
 # CryptoTalk
 
-![Responsive screenshot](static/images-readme/responsive.png)
+![Responsive screenshot](static/images-readme/cryptalk-responsive.png)
 
 # The purpose with this project
 
