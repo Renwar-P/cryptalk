@@ -219,8 +219,8 @@ The sites delete page gives the user the option to delete the post. The delete p
 #### Post detail
 The post detail page easily gives users the oppurtunity to comment on each others post. They can also like the post. 
 
-![Comment](static/images-readme/comment-1-half.png)
-![Comment](static/images-readme/comment-2-half.png)
+![Comment](static/images-readme/post_detail_page_screenshot1.png)
+![Comment](static/images-readme/post_detail_page_screenshot2.png)
 #### Footer
 The sites footer is located in the bottom of the page. It contains socialmedia-links. 
 
