@@ -74,13 +74,13 @@ A live version of this project can be found at this url: <https://cryptalk-32183
 + [Languages used](#languages-used "Languages used")
   - [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
   - [Installed packages](#installed-packages "Installed packages")
-- [Testing](#testing "Testing")
+- [Bugs](#bugs "Bugs")
   - [Bugs during development](#bugs-during-development "Bugs during development")
-  - [Validator Testing](#validator-testing "Validator Testing")
   - [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 - [Deployment](#deployment "deployment")
 - [Content](#content "Content")
 - [Credits](#credits "Credits")
+- [Acknowledgements](#acknowledgements "Acknowledgements")
 
 
 
@@ -301,6 +301,8 @@ When deploying the project to heroku I encountered a problem. Heroku gave me the
 
 There are no unfixed bugs.
 
+
+
 ## Deployment
 
 The site was deployed to Heroku. The steps to deploy are as follows:
@@ -378,8 +380,8 @@ The "I think therefore I Blog" walkthrough project.
 
 
 ### Comment
-The template for the comment page is taken from the "I think therefore I Blog" walkthrough project.
+The template for the comment form is taken from the "I think therefore I Blog" walkthrough project.
 
 
-## Ackowledgments
+## Acknowledgements
 I want to thank my mentor Mitko Bachvarov for his guidance. 
