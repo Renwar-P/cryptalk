@@ -47,7 +47,7 @@ A live version of this project can be found at this url: <https://cryptalk-32183
   - [Languages used](#languages-used)
     - [Frameworks, libraries and tools](#frameworks-libraries-and-tools)
     - [Installed packages](#installed-packages)
-  - [Testing](#testing)
+  - [Testing](TESTING.md)
   - [Bugs](#bugs)
     - [Directory issue with allauth.](#directory-issue-with-allauth)
     - [Blocktrans](#blocktrans)
@@ -196,28 +196,28 @@ The sites logout page asks one simple question.
 ![Logout](static/images-readme/signout-page.png)
 
 #### Add Post
-The sites add post feature also asks for content and body. It also gives the user the option to add a image. 
+The sites add post feature also asks for content and body. It also gives the user the option to add a feature image choose a cointype and add a author(profile) image. 
 
-![Add Post](static/images-readme/add_post.png)
+![Add Post](static/images-readme/add_post_page_screenshot.png)
 
-#### PostDetailView
+#### Post
 
-The postdetailview is the body of the post and contains the img, author, title, postdate, likes and depending on autherisation delete/edit links.
+The post is the body of the post and contains the img, author, title, postdate, coin type, volume, description, author image, likes and depending on autherisation delete/edit links.
 
-![PostDetailView](static/images-readme/post_detail_view.png)
+![PostDetailView](static/images-readme/post.png)
 
 #### Edit 
 The sites edit page gives the user the option to reenter the info. The edit page only appears if the user is authenticated and the author of the post. 
 
-![Edit](static/images-readme/edit_post.png)
+![Edit](static/images-readme/edit_post_page_screenshot.png)
 
 #### Delete
 The sites delete page gives the user the option to delete the post. The delete page only appears if the user is authenticated and the author of the post. 
 
 ![Delete](static/images-readme/delete_post.png)
 
-#### Comment
-The comment section easily gives users to comment on each others post. They can also like the post. 
+#### Post detail
+The post detail page easily gives users the oppurtunity to comment on each others post. They can also like the post. 
 
 ![Comment](static/images-readme/comment-1-half.png)
 ![Comment](static/images-readme/comment-2-half.png)
@@ -231,7 +231,7 @@ The sites footer is located in the bottom of the page. It contains socialmedia-l
 ## Features left to implement
 
 - Password reset function using email
-- Alert message that tells the user that the post is awaiting approval. 
+
 
 ## Languages used
 
@@ -269,14 +269,7 @@ The sites footer is located in the bottom of the page. It contains socialmedia-l
 - requests-oauthlib==1.3.1
 - sqlparse==0.4.4
 
-## Testing 
-All testing in this project has been done manually during the development process, the project has not followed the principles of test driven development. Testing has for the most part followed the track of the user stories. Everytime a user story is concluded testing has been done to make sure the new feature is working. This has been done by simply clicking on the buttons/links and testing all the functions to see if it produced the desired outcome. All the functions in the project are working. 
 
-Django is a python framework so most of the code is written in python. The part of the code that is in js is the alert messages. They work as expected. CryptoTalk has today no socialmedia today so the links go to their respective homepages.
-
-Because this project was developed with Bootstrap it is fully responsive on all screen sizes.  
-
-In the development of this project I encountered several bugs. They are covered in the bugs section. 
 
 ## Bugs 
 During development of this project I encountered several bugs. Some of them are covered here:
@@ -306,29 +299,7 @@ When deploying the project to heroku I encountered a problem. Heroku gave me the
 
 ## Unfixed bugs 
 
-### Automated testing
-I initiated the automated testing. I wanted to test with pythons unittest and to use jest for the little js code in the project. However I could not fix the import issue. When running the tests I got the message that its missing a parent directory and I couldn´t import the block of code I wanted tested. To resolve this I contacted the tutor support that Code Institute provides. That tutor couldn´t locate the problem. Considering the deadline and that its not required for this project, I decided to proceed with only manual testing. 
-
-### Validator Testing
-
-Testing with <https://validator.w3.org/> shows errors in html:
-
-The errors shown are related to the templates from the "I think therefore I blog" walkthrough project. Some of the errors are regarding too long lines and come from the django templates. And some of the errors always appear when saved. Thats why I can´t produce a clean slate of no errors in the html. The errors don´t effect functionality.
-
-
-Testing with lighthouse gives the following results:
-
-![Validator testing](static/images-readme/lighthouse.png)
-
-Testing and validating using pep8 validations tools:
-Testing with <https://www.pythonchecker.com/>
-Testing the pythonchecker.com came back with good results. Testing the base.html file came back 100% no errors. Testing the other python files came back with minor errors such as "whitespaces around operators" and "add two empty lines in front of function". Nothing that effects functionality.  
-
-
-Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
-
-![Validator testing](static/images-readme/css-validator.png)
-
+There are no unfixed bugs.
 
 ## Deployment
 
@@ -408,3 +379,7 @@ The "I think therefore I Blog" walkthrough project.
 
 ### Comment
 The template for the comment page is taken from the "I think therefore I Blog" walkthrough project.
+
+
+## Ackowledgments
+I want to thank my mentor Mitko Bachvarov for his guidance. 
