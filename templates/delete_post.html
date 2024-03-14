@@ -11,7 +11,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-  <h1>Delete post</h1>
+  <h1 style="margin-bottom: 20px; margin-top: 20px;">Delete post</h1>
  
   <h3>Delete: {{ post.title }}</h3>
   <div class="form-group">
@@ -19,8 +19,9 @@
       {% csrf_token %}
 
      
-      <h5>Are you sure...?</h5>
-      <button class="btn-signup btn-large">Delete</button>
+      <h5 style="margin-top: 20px;">Are you sure...?</h5>
+      
+      <button style="margin-top: 30px;  width: 100px; height: 55px; background-color: #F0810F; border-radius: 5px; color: white;">Delete</button>
     </form>
   </div>
 </div>
