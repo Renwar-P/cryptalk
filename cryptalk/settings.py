@@ -38,8 +38,8 @@ DEBUG = True
 
 X_FRAME_OPTIONS: 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['cryptalk-32183a196317.herokuapp.com',
-                 '8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com', '8000-renwarp-cryptalk-b3fesog455f.ws-eu108.gitpod.io', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['cryptalk-32183a196317.herokuapp.com', '8000-renwarp-cryptalk-b3fesog455f.ws-eu110.gitpod.io'
+                 '8000-renwar-p-cryptalk-rredl2asar.us2.codeanyapp.com', '8000-renwarp-cryptalk-b3fesog455f.ws-eu110.gitpod.io']
 
 
 # Application definition

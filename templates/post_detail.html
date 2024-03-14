@@ -122,12 +122,16 @@
             </span>
             wrote:
           </p>
+        
           <!-- The body of the comment goes before the | -->
           {{ comment.body | linebreaks }}
         </div>
+        <a href="{% url 'comment_delete' comment.pk %}">Delete</a>
         <!-- Our for loop ends here -->
         {% endfor %}
       </div>
+      
+      
     </div>
     <div class="col-md-4 card mb-4 mt-3">
       <div class="card-body">
