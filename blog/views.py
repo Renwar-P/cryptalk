@@ -130,11 +130,13 @@ https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/
 class UpdatePostView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'update_post.html'
-    fields = ['title', 'body', 'featured_image', 'coin_type', 'author_image']
+    fields = ['title', 'body', 'coin_type']  
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'Your post has been updated.')
+        form.instance.featured_image = self.request.FILES.get('featured_image')  
+        form.instance.author_image = self.request.FILES.get('author_image')  
+        messages.success(self.request, 'Your post has been updated')
         return super().form_valid(form)
 
 """ the inspiration behind this codeblock came from 
