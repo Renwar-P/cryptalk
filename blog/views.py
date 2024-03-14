@@ -11,6 +11,7 @@ from .models import AuthorImage
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from django.contrib import messages
 
 
 
@@ -160,3 +161,13 @@ class UpdateCommentView(UpdateView):
     template_name = 'update_comment.html'
     fields = ['body']
     success_url = reverse_lazy('home')
+
+
+    def form_valid(self, form):
+        
+        self.object = form.save()
+
+        
+        messages.success(self.request, 'Your comment has been updated.')
+
+        return super().form_valid(form)
