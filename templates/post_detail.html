@@ -128,8 +128,16 @@
         </div>
 
         {% if user.is_authenticated and user == comment.user %}
-        <a href="{% url 'comment_delete' comment.pk %}">Delete</a>
-        <a href="{% url 'update_comment' comment.pk %}">Edit</a>
+        <div class="comment_actions">
+
+          <small>
+
+            <a class="edit" href="{% url 'comment_delete' comment.pk %}">(Delete)</a>
+            <a class="edit" href="{% url 'update_comment' comment.pk %}">(Edit)</a>
+            </small>
+            
+        </div>
+        
 
         {% endif %}
         <!-- Our for loop ends here -->
