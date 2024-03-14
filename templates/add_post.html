@@ -7,19 +7,31 @@
 </head>
 <body>
   {% extends 'base.html' %} {% block content %}
-
-<div class="container">
-  <h1>Add a post</h1>
-
-  <form method="POST" enctype="multipart/form-data">
-    {% csrf_token %} 
-    {{form.as_p}}
-    {{ coin_type_form.as_p }}
-    <p>Add your profile picture</p>
-
-    <button style='margin-bottom: 10px;' class="btn-signup btn-lg">Post</button>
-  </form>
-</div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1 class="text-center">Add a Post</h1>
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="form-group">
+            {{ form.as_p }}
+          </div>
+          <div class="form-group">
+            <label for="id_featured_image">Article Image:</label>
+            <input type="file" class="form-control-file" id="id_featured_image" name="featured_image">
+          </div>
+          <div class="form-group">
+            <label for="id_author_image">Profile Image:</label>
+            <input style="margin-top: 10px;" type="file" class="form-control-file" id="id_author_image" name="author_image">
+          </div>
+          <div class="mb-3"></div> 
+          <button style="width: 100px; height: 55px; background-color: #F0810F; border-radius: 5px; color: white;">Post</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
 
 {% endblock %}
 </body>

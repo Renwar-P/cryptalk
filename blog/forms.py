@@ -1,4 +1,4 @@
-from .models import Comment
+from .models import Comment, Post
 from django import forms
 from .models import CoinType
 from .models import AuthorImage
@@ -33,5 +33,8 @@ Python Django Web Framework - Full Course for Beginners.
 [Codemy](https://codemy.com/) - Django Blog. 
 
 """
-
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['title', 'body', 'coin_type', 'featured_image', 'author_image']
 

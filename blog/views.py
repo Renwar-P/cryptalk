@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm, CoinTypeForm, AuthorImageForm
+from .forms import CommentForm, CoinTypeForm, AuthorImageForm, PostForm
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
@@ -109,17 +109,19 @@ Python Django Web Framework - Full Course for Beginners.
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'body', 'featured_image', 'coin_type', 'author_image']
+    fields = ['title', 'body', 'coin_type']  
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        essages.success(self.request, 'Your post has been created')
+        form.instance.featured_image = self.request.FILES.get('featured_image')  
+        form.instance.author_image = self.request.FILES.get('author_image')  
+        messages.success(self.request, 'Your post has been created')
         return super().form_valid(form)
 
 """ the inspiration behind this codeblock came from 
 Python Django Web Framework - Full Course for Beginners.
 [Codemy](https://codemy.com/) - Django Blog. 
-
+https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/
 
 
 """
