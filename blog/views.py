@@ -153,3 +153,10 @@ class DeleteCommentView(LoginRequiredMixin, DeleteView):
     model = Comment
     template_name = 'comment_delete.html'
     success_url = reverse_lazy('home')
+
+
+class UpdateCommentView(UpdateView):
+    model = Comment
+    template_name = 'update_comment.html'
+    fields = ['body']
+    success_url = reverse_lazy('home')
