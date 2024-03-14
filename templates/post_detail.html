@@ -126,7 +126,11 @@
           <!-- The body of the comment goes before the | -->
           {{ comment.body | linebreaks }}
         </div>
+
+        {% if user.is_authenticated and user == comment.user %}
         <a href="{% url 'comment_delete' comment.pk %}">Delete</a>
+
+        {% endif %}
         <!-- Our for loop ends here -->
         {% endfor %}
       </div>
