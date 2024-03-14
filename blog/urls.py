@@ -1,6 +1,6 @@
 from . import views
 from django.urls import path
-from .views import AddPostView, UpdatePostView, DeletePostView, DeleteCommentView, UpdateCommentView
+from .views import AddPostView, UpdatePostView, DeletePostView, DeleteCommentView, UpdateCommentView, custom_handler404, custom_handler500
 
 
 urlpatterns = [
@@ -13,3 +13,7 @@ urlpatterns = [
     path('article/edit/<int:pk>/remove', DeleteCommentView.as_view(), name='comment_delete'),
     path('article/edit/<int:pk>/update', UpdateCommentView.as_view(), name='update_comment'),
 ]
+
+
+handler404 = custom_handler404
+handler500 = custom_handler500

@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
@@ -8,7 +8,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib.auth import login
 from .models import AuthorImage
-from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
@@ -185,3 +184,15 @@ class UpdateCommentView(UpdateView):
         self.object = form.save()
         messages.success(self.request, 'Your comment has been updated.')
         return super().form_valid(form)
+
+
+
+
+def custom_handler404(request, exception):
+
+    return render(request, '404.html', status=404)
+
+
+def custom_handler500(request):
+    
+    return render(request, '500.html', status=500)
