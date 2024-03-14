@@ -114,6 +114,7 @@ class AddPostView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        essages.success(self.request, 'Your post has been created')
         return super().form_valid(form)
 
 """ the inspiration behind this codeblock came from 
@@ -132,6 +133,7 @@ class UpdatePostView(LoginRequiredMixin, UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
+        messages.success(self.request, 'Your post has been updated.')
         return super().form_valid(form)
 
 """ the inspiration behind this codeblock came from 
@@ -148,12 +150,27 @@ class DeletePostView(LoginRequiredMixin, DeleteView):
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
 
+   
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.delete()
+        messages.success(self.request, 'Your post has been deleted.')
+        return HttpResponseRedirect(success_url)
+
 
 
 class DeleteCommentView(LoginRequiredMixin, DeleteView):
     model = Comment
     template_name = 'comment_delete.html'
     success_url = reverse_lazy('home')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.delete()
+        messages.success(self.request, 'Your comment has been deleted.')
+        return HttpResponseRedirect(success_url)
 
 
 class UpdateCommentView(UpdateView):
@@ -166,8 +183,5 @@ class UpdateCommentView(UpdateView):
     def form_valid(self, form):
         
         self.object = form.save()
-
-        
         messages.success(self.request, 'Your comment has been updated.')
-
         return super().form_valid(form)
