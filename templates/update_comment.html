@@ -30,7 +30,7 @@
           <p>Posting as: {{ user.username }}</p>
           <form method="post" style="margin-top: 1.3em">
             {{ comment_form }} {% csrf_token %}
-            <button class="btn btn-signup right" type="submit">Submit</button>
+            <button class="btn btn-signup right btn-lg" type="submit">Submit</button>
           </form>
           {% endif %} {% endif %}
         </div>
