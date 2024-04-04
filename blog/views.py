@@ -6,7 +6,7 @@ from .forms import CommentForm, CoinTypeForm, AuthorImageForm, PostForm
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from .models import AuthorImage
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -190,6 +190,31 @@ class UpdateCommentView(UpdateView):
         return super().form_valid(form)
 
 
+
+def custom_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        remember = request.POST.get('remember')  
+
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+          
+            if remember:
+                request.session.set_expiry(86400 * 7) 
+            else:
+                request.session.set_expiry(0)  
+
+           
+            messages.success(request, 'You have successfully logged in.')
+
+            return redirect('home') 
+        else:
+            messages.error(request, 'Invalid username or password')
+            return redirect('account_login') 
+    else:
+        return render(request, 'login.html')
 
 
 def custom_handler404(request, exception):
