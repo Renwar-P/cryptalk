@@ -17,6 +17,12 @@ I initiated the automated testing. I wanted to test with pythons unittest and to
 -----------------------------------------------------------------------------------------
 Testing with <https://validator.w3.org/> shows no errors in html:
 
+
+#### Signup Page
+
+
+![Validator testing](static/testing-images/sign_up_page.png)
+
 #### Add Post Page
 
 
