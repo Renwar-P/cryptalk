@@ -62,15 +62,6 @@ Testing with <https://validator.w3.org/> shows no errors in html:
 
 
 
-### Manual Testing
------------------------------------------
-![Validator testing](static/testing-images/testing_cryptotalk.png)
-
-
-
-
-
-
 ## Lighthouse
 
 Testing with lighthouse gives the following results:
@@ -90,3 +81,70 @@ Testing the pythonchecker.com came back with good results. Testing the base.html
 Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 
 ![Validator testing](static/images-readme/css-validator.png)
+
+
+
+
+
+
+
+## Features Testing
+ 
+| Page          | User Action   | Expected Result  | Notes            |
+|---------------|---------------|------------------|------------------|
+| Home Page     |               |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Login link (Navbar) | Redirect to Login Page | PASS  
+|               | Click on Sign Up link | Redirect to Sign Up page | PASS |
+|               | Click on Post detail title | Redirect to Post detail page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+| Home Page (Logged In - User)  |                 |          |  |
+|               | Click on post link (Navbar) | Redirect to Post page | PASS |
+|               | Click on logout link| Redirect to Logout page | PASS |
+|               | Click on delete link| Redirect to Delete page | PASS |
+|               | Click on edit link| Redirect to Edit page | PASS |
+| Sign Up Page  |                  |                  |                  |
+|               | Click on Sign in link| Redirect to Login page | PASS |
+|               | Click on Sign up button | Redirect to Home page | PASS |
+| Sign In Page  |                  |                  |                  |
+|               | Click on Sign up button | Redirect to Sign Up page | PASS |
+|               | Try invalid username | Invalid Username or Password | PASS |
+|               | Try invalid password | Invalid Username or Password  | PASS |
+|               | Valid password and username | Logs in, message that you signed in | PASS |
+|               | Click Sign In link | Redirect to Home page | PASS |
+| Logout Page  |                  |                  |                  |
+|               | Click on Sign Out button | Redirect to Home page, message that you signed out | PASS |
+| Post Page |                  |                  |                  |
+|               | Click on Choose file link (featured image) | Open up file browser| PASS |
+|               | Click on Choose file link (author image) | Open up file browser| PASS |
+|               | Click on Post button | Redirect to Home page, message that you made a post | PASS |
+|               | Click on Coin type field| List of Coin Types| PASS |
+| Post Detail Page |                  |                  |                  |
+|               | Click on Like icon | Likes added | PASS |
+|               | Click on submit button | Comments added | PASS |
+|               | Click on edit link | Redirect to Edit Post Page    | PASS |
+|               | Click on delete link | Redirect to Delete Post Page    | PASS |
+| Edit Post Page |                  |                  |                  |
+|               | Click on Choose file link (featured image) | Open up file browser| PASS |
+|               | Click on Choose file link (author image) | Open up file browser| PASS |
+|               | Click on Submit button | Redirect to Home page, message that you made a post | PASS |
+|               | Click on Coin type field| List of Coin Types| PASS |
+| Delete Post Page |  |    |    |
+|               | Click on Delete button| Redirect to Home page, message that you deleted a post | PASS |
+| Edit Comment Page |  |    |    |
+|               | Click on Submit button| Redirect to Home page, message that you edited a comment| PASS |
+| Delete Comment Page |  |    |    |
+|               | Click on Delete button| Redirect to Home page, message that you deleted a comment | PASS |
+| 404 Error Page |  |    |    |
+|               | Type in URL that does not exists | Custom 404 Error page is displayed | PASS |
+|               | Click on Take Me Home button | Redirect to Home page | PASS |
+| 500 Error Page |  |    |    |
+|               | Admin raise exception in views.py | Custom 500 Error page is displayed, local development testing | PASS |
+|               | Click on Take me home button | Redirect to Home page | PASS |
+| Admin Panel |  |    |    |
+|               | CRUD functionality | Working as expected | PASS |
+
+
+
+
