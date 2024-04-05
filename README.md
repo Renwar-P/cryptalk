@@ -42,6 +42,8 @@ A live version of this project can be found at this url: <https://cryptalk-32183
       - [Edit](#edit)
       - [Delete](#delete)
       - [Comment](#comment)
+      - [Edit Comment](#edit-comment)
+      - [Delete Comment](#delete-comment)
       - [Footer](#footer)
   - [Features left to implement](#features-left-to-implement)
   - [Languages used](#languages-used)
@@ -70,6 +72,8 @@ A live version of this project can be found at this url: <https://cryptalk-32183
     - [Edit](#edit-1)
     - [Delete](#delete-1)
     - [Comment](#comment-1)
+    - [Edit Comment](#edit-1)
+    - [Delete Comment](#delete-1)
 
 + [Languages used](#languages-used "Languages used")
   - [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
@@ -134,6 +138,10 @@ As a **site user** I can **edit my posts** so that **having the flexibility to c
 As a **site user** I can **delete posts** so that **being able to delete unwanted posts**
 
 As a **site user** I can **delete/edit posts** so that **only I can delete/edit my own posts**
+
+As a **site user** I can **edit my comments** so that **having the flexibility to change the content**
+
+As a **site user** I can **delete comments** so that **being able to delete unwanted comments**
 
 
 
@@ -216,8 +224,18 @@ The sites delete page gives the user the option to delete the post. The delete p
 
 ![Delete](static/images-readme/delete_post.png)
 
+#### Delete Comment 
+The sites delete comment page gives the user the option to delete the comment. The delete comment page only appears if the user is authenticated and the author of the comment. 
+
+![Delete](static/images-readme/delete_comment_page.png)
+
+#### Edit Comment
+The sites edit comment page gives the user the option to edit their comment. The edit comment page only appears if the user is authenticated and the author of the comment. 
+
+![Edit](static/images-readme/edit_comment_page.png)
+
 #### Post detail
-The post detail page easily gives users the oppurtunity to comment on each others post. They can also like the post. 
+The post detail page easily gives users the oppurtunity to comment on each others post. They can also like the post. When being the author of the comment, the user has the option to delete and edit their comments.  
 
 ![Comment](static/images-readme/post_detail_page_screenshot1.png)
 ![Comment](static/images-readme/post_detail_page_screenshot2.png)
@@ -363,7 +381,7 @@ The template for the logout page was taken from the "I think therefore I Blog" w
 ### Add post
 The template/code for the add post page was inspired by [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners and by - [Codemy](https://codemy.com/) - Django Blog.
 
-### PostDetailView
+### Post detail
 
 The template for the postdetailview is taken from the "I think therefore I Blog" walkthrough project.
 
@@ -381,6 +399,16 @@ The "I think therefore I Blog" walkthrough project.
 
 ### Comment
 The template for the comment form is taken from the "I think therefore I Blog" walkthrough project.
+
+### Edit Comment
+The template/code for the edit comment page was inspired by [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog. The "I think therefore I Blog" walkthrough project.
+
+
+### Delete Comment
+The template/code for the delete comment page was inspired by [Freecode camp](https://www.youtube.com/watch?v=F5mRW0jo-U4) - Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog. 
+The "I think therefore I Blog" walkthrough project.
 
 
 ## Acknowledgements
