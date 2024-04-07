@@ -2,12 +2,11 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm, CoinTypeForm, AuthorImageForm, PostForm
+from .forms import CommentForm, PostForm
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib.auth import login, authenticate
-from .models import AuthorImage
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
