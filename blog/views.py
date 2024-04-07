@@ -104,18 +104,29 @@ Python Django Web Framework - Full Course for Beginners.
 
 
 
-        
 class AddPostView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = ['title', 'body', 'coin_type']  
+    form_class = PostForm
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        form.instance.featured_image = self.request.FILES.get('featured_image')  
-        form.instance.author_image = self.request.FILES.get('author_image')  
+        form.instance.featured_image = self.request.FILES.get('featured_image')
+        form.instance.author_image = self.request.FILES.get('author_image')
+
+        coin_type_name = form.cleaned_data['coin_type_name']
+        if coin_type_name == 'Other':
+            custom_coin_type = form.cleaned_data.get('custom_coin_type')
+            form.instance.coin_type_name = custom_coin_type
+
+        
+        form.save()
+
         messages.success(self.request, 'Your post has been created')
         return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('home')
 
 """ the inspiration behind this codeblock came from 
 Python Django Web Framework - Full Course for Beginners.

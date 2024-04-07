@@ -14,7 +14,24 @@
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="form-group">
-            {{ form.as_p }}
+            <label for="id_title">Title:</label>
+            {{ form.title }}
+          </div>
+          <div class="form-group">
+            <label for="id_body">Body:</label>
+            {{ form.body }}
+          </div>
+          <div class="form-group">
+            <label for="id_coin_type_name">Coin Type Name:</label>
+            {{ form.coin_type_name }}
+          </div>
+          <div class="form-group">
+            <label for="id_coin_type_max_cap">Coin Type Max Cap:</label>
+            {{ form.coin_type_max_cap }}
+          </div>
+          <div  class="form-group">
+            <label style="height: 5px;" for="id_coin_type_description">Coin Type Description:</label>
+            {{ form.coin_type_description }}
           </div>
           <div class="form-group">
             <label for="id_featured_image">Article Image:</label>
@@ -22,16 +39,13 @@
           </div>
           <div class="form-group">
             <label for="id_author_image">Profile Image:</label>
-            <input style="margin-top: 10px;" type="file" class="form-control-file" id="id_author_image" name="author_image">
+            <input type="file" class="form-control-file" id="id_author_image" name="author_image">
           </div>
-          <div class="mb-3"></div> 
           <button class="btn btn-signup right btn-lg" type="submit">Post</button>
         </form>
       </div>
     </div>
   </div>
-  
-  
 
 {% endblock %}
 </body>
