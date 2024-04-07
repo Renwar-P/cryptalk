@@ -140,7 +140,7 @@ https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/
 class UpdatePostView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'update_post.html'
-    fields = ['title', 'body', 'coin_type']
+    form_class = PostForm
     success_url = reverse_lazy('home')  
 
 
