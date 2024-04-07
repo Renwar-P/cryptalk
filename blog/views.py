@@ -130,7 +130,17 @@ https://docs.djangoproject.com/en/5.0/topics/forms/modelforms/
 class UpdatePostView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'update_post.html'
-    fields = ['title', 'body', 'coin_type']  
+    fields = ['title', 'body', 'coin_type']
+    success_url = reverse_lazy('home')  
+
+
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.author != self.request.user:
+            messages.error(self.request, 'You are not authorized to update this post.')
+            return HttpResponseRedirect(self.success_url)
+        return super().dispatch(request, *args, **kwargs)
+
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -153,6 +163,14 @@ class DeletePostView(LoginRequiredMixin, DeleteView):
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
 
+
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.author != self.request.user:
+            messages.error(self.request, 'You are not authorized to delete this post.')
+            return HttpResponseRedirect(self.success_url)
+        return super().dispatch(request, *args, **kwargs)
+
    
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
@@ -168,6 +186,13 @@ class DeleteCommentView(LoginRequiredMixin, DeleteView):
     template_name = 'comment_delete.html'
     success_url = reverse_lazy('home')
 
+    def dispatch(self, request, *args, **kwargs):
+      
+        if self.object.author != self.request.user:
+            messages.error(self.request, 'You are not authorized to delete this comment.')
+            return HttpResponseRedirect(self.success_url)
+        return super().dispatch(request, *args, **kwargs)
+
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
         success_url = self.get_success_url()
@@ -175,20 +200,23 @@ class DeleteCommentView(LoginRequiredMixin, DeleteView):
         messages.success(self.request, 'Your comment has been deleted.')
         return HttpResponseRedirect(success_url)
 
-
-class UpdateCommentView(UpdateView):
+class UpdateCommentView(LoginRequiredMixin, UpdateView):
     model = Comment
     template_name = 'update_comment.html'
     fields = ['body']
     success_url = reverse_lazy('home')
 
+    def dispatch(self, request, *args, **kwargs):
+        self.object = self.get_object()
+       
+        if self.object.author != self.request.user:
+            messages.error(self.request, 'You are not authorized to update this comment.')
+            return HttpResponseRedirect(self.success_url)
+        return super().dispatch(request, *args, **kwargs)
 
     def form_valid(self, form):
-        
-        self.object = form.save()
         messages.success(self.request, 'Your comment has been updated.')
         return super().form_valid(form)
-
 
 
 def custom_login(request):
