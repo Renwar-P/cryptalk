@@ -91,6 +91,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'cryptalk.urls'
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

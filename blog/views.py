@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.contrib.auth import login, authenticate
@@ -101,7 +101,11 @@ Python Django Web Framework - Full Course for Beginners.
 [Codemy](https://codemy.com/) - Django Blog. 
 
 """
-
+class PostListView(generic.ListView, LoginRequiredMixin):
+    model = Post
+    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    template_name = "post_list.html"
+    paginate_by = 6
 
 
 class AddPostView(LoginRequiredMixin, CreateView):
