@@ -34,7 +34,7 @@ class PostDetail(View):
             liked = True
 
         
-        coin_type_form = CoinTypeForm(instance=post.coin_type)
+        
 
         return render(
             request,
@@ -45,7 +45,7 @@ class PostDetail(View):
                 "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm(),
-                "coin_type_form": coin_type_form
+               
             },
         )
 
@@ -69,7 +69,7 @@ class PostDetail(View):
             comment_form = CommentForm()
 
         
-        coin_type_form = CoinTypeForm(instance=post.coin_type)
+       
 
         return render(
             request,
@@ -80,7 +80,7 @@ class PostDetail(View):
                 "commented": True,
                 "comment_form": comment_form,
                 "liked": liked,
-                "coin_type_form": coin_type_form,
+                
             },
         )
 class PostLike(View):

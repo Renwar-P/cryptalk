@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <h1 class="text-center">Add a Post</h1>
+        <h1 class="text-center">Add a post</h1>
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="form-group">
@@ -18,7 +18,7 @@
             {{ form.title }}
           </div>
           <div class="form-group">
-            <label for="id_body">Body:</label>
+            <label id="text_input" for="id_body">Text:</label>
             {{ form.body }}
           </div>
           <div class="form-group">
@@ -30,18 +30,18 @@
             {{ form.coin_type_max_cap }}
           </div>
           <div  class="form-group">
-            <label style="height: 5px;" for="id_coin_type_description">Coin Type Description:</label>
+            <label style="height: 5px; margin-bottom: 30px;" for="id_coin_type_description">Coin Type Description:</label>
             {{ form.coin_type_description }}
           </div>
           <div class="form-group">
             <label for="id_featured_image">Article Image:</label>
-            <input type="file" class="form-control-file" id="id_featured_image" name="featured_image">
+            <input type="file" style="margin-bottom: 20px;" id="id_featured_image" name="featured_image">
           </div>
           <div class="form-group">
             <label for="id_author_image">Profile Image:</label>
-            <input type="file" class="form-control-file" id="id_author_image" name="author_image">
+            <input type="file" id="id_author_image" name="author_image">
           </div>
-          <button class="btn btn-signup right btn-lg" type="submit">Post</button>
+          <button   style="margin-top: 20px;" class="btn btn-signup right btn-lg" type="submit">Post</button>
         </form>
       </div>
     </div>
