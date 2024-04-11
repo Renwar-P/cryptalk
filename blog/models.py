@@ -24,7 +24,6 @@ class Post(models.Model):
     coin_type_description = models.TextField(blank=True, null=True)
     coin_type_max_cap = models.IntegerField(blank=True, null=True)
     author_image = CloudinaryField('image', default='placeholder', blank=True, null=True)
-    custom_coin_type = models.CharField(max_length=50, blank=True, null=True)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField(blank=True)

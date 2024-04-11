@@ -20,7 +20,10 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title', 'body', 'coin_type_name', 'coin_type_description', 'coin_type_max_cap']
 
-
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['title'].required = True
+        self.fields['body'].required = True
 
     def clean(self):
         cleaned_data = super().clean()

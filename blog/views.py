@@ -118,10 +118,7 @@ class AddPostView(LoginRequiredMixin, CreateView):
         form.instance.featured_image = self.request.FILES.get('featured_image')
         form.instance.author_image = self.request.FILES.get('author_image')
 
-        coin_type_name = form.cleaned_data['coin_type_name']
-        if coin_type_name == 'Other':
-            custom_coin_type = form.cleaned_data.get('custom_coin_type')
-            form.instance.coin_type_name = custom_coin_type
+        
 
         
         form.save()
