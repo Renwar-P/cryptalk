@@ -46,7 +46,7 @@
                 <p class="card-text text-muted h6">
                   {{ post.created_on}} -
                   <i class="far fa-heart"></i> | {{post.number_of_likes }} |
-                  {{post.coin_type_name}} | {{post.coin_type_description}} | {{post.coin_type_max_cap}}
+                  {{post.coin_type_name|default_if_none:"" }} | {{post.coin_type_description |default_if_none:"" }} | {{post.coin_type_max_cap |default_if_none:"" }}
                 </p>
               </a>
               
