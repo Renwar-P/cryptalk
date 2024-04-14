@@ -18,7 +18,7 @@ Python Django Web Framework - Full Course for Beginners.
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'body', 'coin_type_name', 'coin_type_description', 'coin_type_max_cap']
+        fields = ['title', 'body', 'coin_type_name', 'coin_type_description', 'coin_type_max_cap', 'coin_creator']
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
