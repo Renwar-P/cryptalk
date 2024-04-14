@@ -15,23 +15,27 @@
             {{ form.body }}
           </div>
           <div class="form-group">
-            <label for="id_coin_type_name">Coin Type Name:</label>
+            <label for="id_coin_type_name">Coin Type Name:(optional)</label>
             {{ form.coin_type_name }}
           </div>
           <div class="form-group">
-            <label for="id_coin_type_max_cap">Coin Type Max Cap:</label>
+            <label for="id_coin_type_max_cap">Coin Type Max Cap:(optional)</label>
             {{ form.coin_type_max_cap }}
           </div>
+          <div class="form-group">
+            <label for="id_coin_type_max_cap">Coin Creator:(optional)</label>
+            {{ form.coin_creator }}
+          </div>
           <div  class="form-group">
-            <label style="height: 5px; margin-bottom: 30px;" for="id_coin_type_description">Coin Type Description:</label>
+            <label style="height: 5px; margin-bottom: 30px;" for="id_coin_type_description">Coin Type Description:(optional)</label>
             {{ form.coin_type_description }}
           </div>
           <div class="form-group">
-            <label for="id_featured_image">Article Image:</label>
+            <label for="id_featured_image">Article Image:(optional)</label>
             <input type="file" style="margin-bottom: 20px;" id="id_featured_image" name="featured_image">
           </div>
           <div class="form-group">
-            <label for="id_author_image">Profile Image:</label>
+            <label for="id_author_image">Profile Image:(optional)</label>
             <input type="file" id="id_author_image" name="author_image">
           </div>
           <button   style="margin-top: 20px;" class="btn btn-signup right btn-lg" type="submit">Post</button>
