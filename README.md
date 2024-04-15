@@ -96,7 +96,7 @@ This application is ment for:
 
 - Everyone with a interest in cryptonews
   
-### User Goals
+### User Experience
 
 To create a user friendly website that is appealing. To create a website for cryptoentusiasts to share the latest news and with that stay ahead of the curve.  
 
@@ -161,7 +161,7 @@ The idea of behind CryptoTalk´s design is simplicity. My main focus here was to
 
 
 ### Database scheme
-![Database](static/images-readme/Project4-Database.jpg)
+![Database](static/images-readme/database_scheme.png)
 
 
 ### Site navigation

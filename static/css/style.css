@@ -294,3 +294,33 @@ margin-top: -20px;
 
     margin-bottom: 20px;
 }
+
+
+@media only screen and (max-width: 1100px) {
+
+
+
+    #right_image {
+
+        display: none;
+    }
+
+    #left_image {
+
+        margin-top: 50px;
+
+        width: 500px;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    #left_image {
+
+        margin-top: 50px;
+
+        width: 250px;
+        height: 150px;
+    }
+}
