@@ -2,6 +2,9 @@
 
 ![Responsive screenshot](static/images-readme/cryptalk-responsive.png)
 
+
+
+
 # The purpose with this project
 
 Few subjects today can get people going like crypto. It´s something that almost everyone has an opinion about. Its a topic that many don´t really fully understand. It´s also a subject that people like or dislike for many different reasons. CryptoTalk is a blog for anyone interested in crypto. It´s a way for someone with a opinion on crypto to share that with others. 
@@ -14,11 +17,35 @@ Required technologies for this project:
 
 A live version of this project can be found at this url: <https://cryptalk-32183a196317.herokuapp.com/>
 
+# Design 
+
+## Color Scheme 
+[coolors.co](https://coolors.co/palette/f0810f-ffffff-063852-445261-e84610)
+
+![screenshot](static/images-readme/color_palette.png)
+
+
+### Design diagram
+
+The idea of behind CryptoTalk´s design is simplicity. My main focus here was to implement CRUD and to get the django elemnts working. 
+
+![Wireframe1](static/images-readme/home-bals.png)
+![Wireframe2](static/images-readme/signup-bals.png)
+![Wireframe3](static/images-readme/signup-bals.png)
+
+
+### Database scheme
+![Database](static/images-readme/database_scheme.png)
+
+
 
 # Table of Content
 
 - [CryptoTalk](#cryptotalk)
 - [The purpose with this project](#the-purpose-with-this-project)
+- [Design](#design)
+  - [Design diagram](#design-diagram)
+  - [Database scheme](#design-diagram)
 - [Table of Content](#table-of-content)
   - [UX](#ux)
     - [User Demographic](#user-demographic)
@@ -27,8 +54,6 @@ A live version of this project can be found at this url: <https://cryptalk-32183
       - [Admin](#admin)
       - [User](#user)
     - [Project Purpose](#project-purpose)
-    - [Design diagram](#design-diagram)
-    - [Database scheme](#design-diagram)
     - [Site navigation](#site-navigation)
   - [Features](#features)
     - [Existing Features](#existing-features)
@@ -143,6 +168,8 @@ As a **site user** I can **edit my comments** so that **having the flexibility t
 
 As a **site user** I can **delete comments** so that **being able to delete unwanted comments**
 
+As a **site user** I can **add own coin type** so that **I have a more uniqe and enjoyable site experience**
+
 
 
 ### Project Purpose
@@ -150,18 +177,6 @@ As a **site user** I can **delete comments** so that **being able to delete unwa
 From Code Institutes assessment guide:
 
 In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
-
-### Design diagram
-
-The idea of behind CryptoTalk´s design is simplicity. My main focus here was to implement CRUD and to get the django elemnts working. 
-
-![Wireframe1](static/images-readme/home-bals.png)
-![Wireframe2](static/images-readme/signup-bals.png)
-![Wireframe3](static/images-readme/signup-bals.png)
-
-
-### Database scheme
-![Database](static/images-readme/database_scheme.png)
 
 
 ### Site navigation
