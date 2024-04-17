@@ -192,15 +192,14 @@ class DeletePostView(LoginRequiredMixin, DeleteView):
         return HttpResponseRedirect(success_url)
 
 
-
 class DeleteCommentView(LoginRequiredMixin, DeleteView):
     model = Comment
     template_name = 'comment_delete.html'
     success_url = reverse_lazy('post_detail')
 
     def dispatch(self, request, *args, **kwargs):
-      
-        if self.object.author != self.request.user:
+        comment = self.get_object()
+        if comment.user != self.request.user:
             messages.error(self.request, 'You are not authorized to delete this comment.')
             return HttpResponseRedirect(self.success_url)
         return super().dispatch(request, *args, **kwargs)
@@ -212,6 +211,7 @@ class DeleteCommentView(LoginRequiredMixin, DeleteView):
         messages.success(self.request, 'Your comment has been deleted.')
         return HttpResponseRedirect(success_url)
 
+
 class UpdateCommentView(LoginRequiredMixin, UpdateView):
     model = Comment
     template_name = 'update_comment.html'
@@ -221,7 +221,7 @@ class UpdateCommentView(LoginRequiredMixin, UpdateView):
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
        
-        if self.object.author != self.request.user:
+        if self.object.user != self.request.user:
             messages.error(self.request, 'You are not authorized to update this comment.')
             return HttpResponseRedirect(self.success_url)
         return super().dispatch(request, *args, **kwargs)
