@@ -181,7 +181,7 @@ In this project, you'll build a Full-Stack site based on business logic used to 
 
 ### Site navigation
 
-![Site navigation](static/images-readme/SITE_NAVIGATION.png)
+![Site navigation](static/images-readme/site_navigation.png)
 
 
 ## Features

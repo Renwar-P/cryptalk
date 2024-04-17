@@ -127,7 +127,7 @@ class AddPostView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse_lazy('home')
+        return reverse_lazy('post_list')
 
 """ the inspiration behind this codeblock came from 
 Python Django Web Framework - Full Course for Beginners.
@@ -142,7 +142,7 @@ class UpdatePostView(LoginRequiredMixin, UpdateView):
     model = Post
     template_name = 'update_post.html'
     form_class = PostForm
-    success_url = reverse_lazy('home')  
+    success_url = reverse_lazy('post_list')  
 
 
     def dispatch(self, request, *args, **kwargs):
@@ -172,7 +172,7 @@ Python Django Web Framework - Full Course for Beginners.
 class DeletePostView(LoginRequiredMixin, DeleteView):
     model = Post
     template_name = 'delete_post.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('post_list')
 
 
     def dispatch(self, request, *args, **kwargs):
@@ -195,7 +195,7 @@ class DeletePostView(LoginRequiredMixin, DeleteView):
 class DeleteCommentView(LoginRequiredMixin, DeleteView):
     model = Comment
     template_name = 'comment_delete.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('post_detail')
 
     def dispatch(self, request, *args, **kwargs):
       
@@ -215,7 +215,7 @@ class UpdateCommentView(LoginRequiredMixin, UpdateView):
     model = Comment
     template_name = 'update_comment.html'
     fields = ['body']
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('post_detail')
 
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
