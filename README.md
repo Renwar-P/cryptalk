@@ -3,47 +3,12 @@
 ![Responsive screenshot](static/images-readme/cryptalk-responsive.png)
 
 
-
-
-# The purpose with this project
-
-Few subjects today can get people going like crypto. It´s something that almost everyone has an opinion about. Its a topic that many don´t really fully understand. It´s also a subject that people like or dislike for many different reasons. CryptoTalk is a blog for anyone interested in crypto. It´s a way for someone with a opinion on crypto to share that with others. 
-
-
-Required technologies for this project:
-
-- HTML, CSS, JavaScript, Python+Django
-- Relational database (SQL)
-
-A live version of this project can be found at this url: <https://cryptalk-32183a196317.herokuapp.com/>
-
-# Design 
-
-## Color Scheme 
-[coolors.co](https://coolors.co/palette/f0810f-ffffff-063852-445261-e84610)
-
-![screenshot](static/images-readme/color_palette.png)
-
-
-### Design diagram
-
-The idea of behind CryptoTalk´s design is simplicity. My main focus here was to implement CRUD and to get the django elemnts working. 
-
-![Wireframe1](static/images-readme/home-bals.png)
-![Wireframe2](static/images-readme/signup-bals.png)
-![Wireframe3](static/images-readme/signup-bals.png)
-
-
-### Database scheme
-![Database](static/images-readme/database_scheme.png)
-
-
-
 # Table of Content
 
 - [CryptoTalk](#cryptotalk)
 - [The purpose with this project](#the-purpose-with-this-project)
 - [Design](#design)
+  - [Color Scheme](#color-scheme)
   - [Design diagram](#design-diagram)
   - [Database scheme](#design-diagram)
 - [Table of Content](#table-of-content)
@@ -113,6 +78,42 @@ The idea of behind CryptoTalk´s design is simplicity. My main focus here was to
 
 
 
+
+# The purpose with this project
+
+Few subjects today can get people going like crypto. It´s something that almost everyone has an opinion about. Its a topic that many don´t really fully understand. It´s also a subject that people like or dislike for many different reasons. CryptoTalk is a blog for anyone interested in crypto. It´s a way for someone with a opinion on crypto to share that with others. 
+
+
+Required technologies for this project:
+
+- HTML, CSS, JavaScript, Python+Django
+- Relational database (SQL)
+
+A live version of this project can be found at this url: <https://cryptalk-32183a196317.herokuapp.com/>
+
+# Design 
+
+## Color Scheme 
+[coolors.co](https://coolors.co/palette/f0810f-ffffff-063852-445261-e84610)
+
+![screenshot](static/images-readme/color_palette.png)
+
+
+### Design Diagram
+
+The idea of behind CryptoTalk´s design is simplicity. My main focus here was to implement CRUD and to get the django elemnts working. 
+
+![Wireframe1](static/images-readme/home-bals.png)
+![Wireframe2](static/images-readme/signup-bals.png)
+![Wireframe3](static/images-readme/signup-bals.png)
+
+
+### Database Scheme
+![Database](static/images-readme/database_scheme.png)
+
+
+
+
 ## UX
 
 ### User Demographic
@@ -179,7 +180,7 @@ From Code Institutes assessment guide:
 In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 
 
-### Site navigation
+### Site Navigation
 
 ![Site navigation](static/images-readme/site_navigation.png)
 
@@ -192,9 +193,9 @@ Cryptotalk consists of features avaliable for the site user and admin.
 
 #### Home
 
-The homepage contains the latest post and is the common redirect in this project. 
+The homepage contains two images and a descriptive text
 
-![Home](static/images-readme/home.png)
+![Home](sstatic/images-readme/home_page.png)
 
 #### Navbar
 
@@ -216,7 +217,7 @@ The sites login page tells the user what it needs to validate.
 #### Logout
 The sites logout page asks one simple question. 
 
-![Logout](static/images-readme/signout-page.png)
+![Logout](static/images-readme/log_out_page.png)
 
 #### Add Post
 The sites add post feature also asks for content and body. It also gives the user the option to add a feature image choose a cointype and add a author(profile) image. 
@@ -225,7 +226,7 @@ The sites add post feature also asks for content and body. It also gives the use
 
 #### Post
 
-The post is the body of the post and contains the img, author, title, postdate, coin type, volume, description, author image, likes and depending on autherisation delete/edit links.
+The post is the body of the post and contains the img, author, title, postdate, coin type, max cap, description, author image, coin creator, likes and depending on autherisation delete/edit links.
 
 ![PostDetailView](static/images-readme/post.png)
 
