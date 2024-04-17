@@ -173,11 +173,6 @@ As a **site user** I can **add own coin type** so that **I have a more uniqe and
 
 
 
-### Project Purpose
-
-From Code Institutes assessment guide:
-
-In this project, you'll build a Full-Stack site based on business logic used to control a centrally-owned dataset. You will set up an authentication mechanism and provide role-based access to the site's data or other activities based on the dataset.
 
 
 ### Site Navigation
@@ -195,7 +190,7 @@ Cryptotalk consists of features avaliable for the site user and admin.
 
 The homepage contains two images and a descriptive text
 
-![Home](sstatic/images-readme/home_page.png)
+![Home](static/images-readme/home_page.png)
 
 #### Navbar
 
@@ -229,6 +224,13 @@ The sites add post feature also asks for content and body. It also gives the use
 The post is the body of the post and contains the img, author, title, postdate, coin type, max cap, description, author image, coin creator, likes and depending on autherisation delete/edit links.
 
 ![PostDetailView](static/images-readme/post.png)
+
+
+#### Postlist
+The sites contains the blog posts created. 
+
+![Postlist](static/images-readme/post_list_html.png)
+
 
 #### Edit 
 The sites edit page gives the user the option to reenter the info. The edit page only appears if the user is authenticated and the author of the post. 
@@ -374,7 +376,11 @@ I have utilised many websites for the development of this project. Here are some
 Here is a list of the features in the projected and the code that inspired them. 
 
 ### Home
-The template for the homepage was taken from the "I think therefore I Blog" walkthrough project. I kept the navbar and footer. I styled them with my own colors. 
+The inspiration behind the homepage comes from myself and my project "Love BJJ". I took the Bootstrap code from my Add Post page and from Bootstraps documentation. The styling is my own.  
+
+
+### Postlist
+The template for the postlist page was taken from the "I think therefore I Blog" walkthrough project. I kept the navbar and footer. I styled them with my own colors.
 
 ### Navbar
 The template for the navbar was taken from the "I think therefore I Blog" walkthrough project.

@@ -23,6 +23,11 @@ Testing with <https://validator.w3.org/> shows no errors in html:
 
 ![Validator testing](static/testing-images/sign_up_page.png)
 
+#### Postlist Page
+
+
+![Validator testing](static/images-readme/post_list_page.png)
+
 #### Add Post Page
 
 

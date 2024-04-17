@@ -195,7 +195,10 @@ class DeletePostView(LoginRequiredMixin, DeleteView):
 class DeleteCommentView(LoginRequiredMixin, DeleteView):
     model = Comment
     template_name = 'comment_delete.html'
-    success_url = reverse_lazy('post_detail')
+    
+    
+    def get_success_url(self):
+        return reverse_lazy('post_detail', kwargs={'slug': self.object.post.slug})
 
     def dispatch(self, request, *args, **kwargs):
         comment = self.get_object()
@@ -216,7 +219,10 @@ class UpdateCommentView(LoginRequiredMixin, UpdateView):
     model = Comment
     template_name = 'update_comment.html'
     fields = ['body']
-    success_url = reverse_lazy('post_detail')
+    
+    
+    def get_success_url(self):
+        return reverse_lazy('post_detail', kwargs={'slug': self.object.post.slug})
 
     def dispatch(self, request, *args, **kwargs):
         self.object = self.get_object()
