@@ -111,24 +111,47 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Login link (Navbar) | Redirect to Login Page | PASS  
 |               | Click on Sign Up link | Redirect to Sign Up page | PASS |
-|               | Click on Post detail title | Redirect to Post detail page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 | Home Page (Logged In - User)  |                 |          |  |
-|               | Click on post link (Navbar) | Redirect to Post page | PASS |
-|               | Click on logout link| Redirect to Logout page | PASS |
-|               | Click on delete link| Redirect to Delete page | PASS |
-|               | Click on edit link| Redirect to Edit page | PASS |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
+| Postlist Page     |               |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
+|               | Click on Post detail title | Redirect to Post detail page | PASS |
+|               | Click on Edit link | Redirect to Edit Post page | PASS |
+|               | Click on Delete link | Redirect to Delete Post page | PASS |
+| Login Page  |                  |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Sign up link| Redirect to Sing Up page | PASS |
+|               | Click on Sign up link (Navbar)| Redirect to Sing Up page | PASS |
+|               | Click on Login button | Redirect to Home page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Try without username | Must provide user name| PASS |
+|               | Try without password | Must provide password| PASS |
 | Sign Up Page  |                  |                  |                  |
-|               | Click on Sign in link| Redirect to Login page | PASS |
 |               | Click on Sign up button | Redirect to Home page | PASS |
-| Sign In Page  |                  |                  |                  |
-|               | Click on Sign up button | Redirect to Sign Up page | PASS |
-|               | Try invalid username | Invalid Username or Password | PASS |
-|               | Try invalid password | Invalid Username or Password  | PASS |
+|               | Try without username | Must provide user name| PASS |
+|               | Try without password | Must provide password| PASS |
 |               | Valid password and username | Logs in, message that you signed in | PASS |
-|               | Click Sign In link | Redirect to Home page | PASS |
+|               | Click Login link | Redirect to Login page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 | Logout Page  |                  |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Sign Out button | Redirect to Home page, message that you signed out | PASS |
 | Post Page |                  |                  |                  |
 |               | Click on Choose file link (featured image) | Open up file browser| PASS |
