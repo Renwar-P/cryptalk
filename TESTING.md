@@ -65,6 +65,16 @@ Testing with <https://validator.w3.org/> shows no errors in html:
 
 ![Validator testing](static/testing-images/post_detail_page.png)
 
+#### Edit Comment Page
+
+
+![Validator testing](static/images-readme/edit_comment_page_check.png)
+
+#### Delete Comment Page
+
+
+![Validator testing](static/images-readme/delete_comment_page_check.png)
+
 
 
 ## Lighthouse
