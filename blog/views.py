@@ -122,7 +122,7 @@ class AddPostView(LoginRequiredMixin, CreateView):
         form.instance.author_image = self.request.FILES.get('author_image')
 
        
-        
+        raise ValueError("Intentional 500 error for testing")
 
         
 

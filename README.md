@@ -257,10 +257,23 @@ The post detail page easily gives users the oppurtunity to comment on each other
 
 ![Comment](static/images-readme/post_detail_page_screenshot1.png)
 ![Comment](static/images-readme/post_detail_page_screenshot2.png)
+
+
 #### Footer
 The sites footer is located in the bottom of the page. It contains socialmedia-links. 
 
 ![Footer](static/images-readme/footer.png)
+
+
+#### 404
+The 404 page appears when a invalid url is entered. 
+
+![404.page](static/images-readme/404.page.png)
+
+#### 500
+The 500 page appears when a server error occurs. 
+
+![500.page](static/images-readme/500.page.png)
 
 
 

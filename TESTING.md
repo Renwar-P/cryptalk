@@ -75,6 +75,16 @@ Testing with <https://validator.w3.org/> shows no errors in html:
 
 ![Validator testing](static/images-readme/delete_comment_page_check.png)
 
+#### 404 Page
+
+
+![Validator testing](static/images-readme/404_check.png)
+
+#### 500 Page
+
+
+![Validator testing](static/images-readme/500_check.png)
+
 
 
 ## Lighthouse
