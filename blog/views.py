@@ -1,6 +1,6 @@
+from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm, PostForm
 from django.views.generic import CreateView, UpdateView, DeleteView, ListView
@@ -10,6 +10,8 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
+
+
 
 
 
@@ -118,6 +120,9 @@ class AddPostView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         form.instance.featured_image = self.request.FILES.get('featured_image')
         form.instance.author_image = self.request.FILES.get('author_image')
+
+       
+        
 
         
 

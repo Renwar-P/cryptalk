@@ -139,6 +139,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Try without username | Must provide user name| PASS |
 |               | Try without password | Must provide password| PASS |
+|               | Logging in| Confirmation that the user has logged in | PASS |
 | Sign Up Page  |                  |                  |                  |
 |               | Click on Sign up button | Redirect to Home page | PASS |
 |               | Try without username | Must provide user name| PASS |
@@ -146,6 +147,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Valid password and username | Logs in, message that you signed in | PASS |
 |               | Click Login link | Redirect to Login page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
+|               | Signing up| Confirmation that the user has logged in | PASS |
 | Logout Page  |                  |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
@@ -153,31 +155,92 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Sign Out button | Redirect to Home page, message that you signed out | PASS |
+|               | Logging out | Confirmation that the user has logged out| PASS |
 | Post Page |                  |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Choose file link (featured image) | Open up file browser| PASS |
 |               | Click on Choose file link (author image) | Open up file browser| PASS |
-|               | Click on Post button | Redirect to Home page, message that you made a post | PASS |
-|               | Click on Coin type field| List of Coin Types| PASS |
+|               | Click on Post button | Redirect to Home page | PASS |
+|               | Try without title | Must provide title| PASS |
+|               | Try without text | Must provide text| PASS |
+|               | Try without adding coin type| Works without adding coin type| PASS |
+|               | Try without adding coin description| Works without adding coin description| PASS |
+|               | Try without adding coin max cap| Works without adding coin max cap| PASS |
+|               | Try without adding coin creator| Works without adding coin creator| PASS |
+|               | Creating a post| Confirmation that the post has been created | PASS |
 | Post Detail Page |                  |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Like icon | Likes added | PASS |
 |               | Click on submit button | Comments added | PASS |
-|               | Click on edit link | Redirect to Edit Post Page    | PASS |
-|               | Click on delete link | Redirect to Delete Post Page    | PASS |
+|               | Click on edit comment link | Redirect to Edit Comment Page    | PASS |
+|               | Click on delete comment link | Redirect to Delete Comment Page    | PASS |
+|               | Create a comment | Confirmation that the comment has been created | PASS |
 | Edit Post Page |                  |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Choose file link (featured image) | Open up file browser| PASS |
 |               | Click on Choose file link (author image) | Open up file browser| PASS |
-|               | Click on Submit button | Redirect to Home page, message that you made a post | PASS |
-|               | Click on Coin type field| List of Coin Types| PASS |
+|               | Click on Post button | Redirect to Home page | PASS |
+|               | Try without title | Must provide title| PASS |
+|               | Try without text | Must provide text| PASS |
+|               | Try without adding coin type| Works without adding coin type| PASS |
+|               | Try without adding coin description| Works without adding coin description| PASS |
+|               | Try without adding coin max cap| Works without adding coin max cap| PASS |
+|               | Try without adding coin creator| Works without adding coin creator| PASS |
+|               | Editing/Creating a post| Confirmation that the post has been edited | PASS |PASS |
 | Delete Post Page |  |    |    |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Delete button| Redirect to Home page, message that you deleted a post | PASS |
+|               | Deleting a post| Confirmation that the post has been deleted | PASS |
 | Edit Comment Page |  |    |    |
-|               | Click on Submit button| Redirect to Home page, message that you edited a comment| PASS |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Submit button| Redirect to Home page| PASS |
+|               |Editing a comment| Confirmation that the comment has been edited | PASS |
 | Delete Comment Page |  |    |    |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Delete button| Redirect to Home page, message that you deleted a comment | PASS |
 | 404 Error Page |  |    |    |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link when logged in (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Login link (Navbar)| Redirect to Login page | PASS |
+|               | Click on Signup link (Navbar)| Redirect to Signup page | PASS |
+|               | Click on Posts when logged in link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link when logged in (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Type in URL that does not exists | Custom 404 Error page is displayed | PASS |
 |               | Click on Take Me Home button | Redirect to Home page | PASS |
 | 500 Error Page |  |    |    |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Add Post link when logged in (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Login link (Navbar)| Redirect to Login page | PASS |
+|               | Click on Signup link (Navbar)| Redirect to Signup page | PASS |
+|               | Click on Posts link when logged in (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Logout link when logged in (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Take Me Home button | Redirect to Home page | PASS |
 |               | Admin raise exception in views.py | Custom 500 Error page is displayed, local development testing | PASS |
 |               | Click on Take me home button | Redirect to Home page | PASS |
 | Admin Panel |  |    |    |
