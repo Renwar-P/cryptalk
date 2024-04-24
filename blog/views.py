@@ -17,6 +17,7 @@ from django.contrib import messages
 
 
 
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
@@ -121,8 +122,11 @@ class AddPostView(LoginRequiredMixin, CreateView):
         form.instance.featured_image = self.request.FILES.get('featured_image')
         form.instance.author_image = self.request.FILES.get('author_image')
 
+
        
-        raise ValueError("Intentional 500 error for testing")
+
+       
+    
 
         
 
@@ -269,6 +273,7 @@ def custom_login(request):
 
 
 def custom_handler404(request, exception):
+    
 
     return render(request, '404.html', status=404)
 

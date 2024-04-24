@@ -4,7 +4,7 @@ from .views import AddPostView, UpdatePostView, DeletePostView, DeleteCommentVie
 
 
 urlpatterns = [
-    path("", views.PostList.as_view(), name="home"),
+    path('', views.PostList.as_view(), name='home'),
     path('add_post/', AddPostView.as_view(), name='add_post'),
     path('post_list/', PostListView.as_view(), name='post_list'),
     path('custom-login/', custom_login, name='custom_login'),
