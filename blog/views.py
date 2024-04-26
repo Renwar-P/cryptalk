@@ -122,8 +122,9 @@ class AddPostView(LoginRequiredMixin, CreateView):
         form.instance.featured_image = self.request.FILES.get('featured_image')
         form.instance.author_image = self.request.FILES.get('author_image')
 
+        raise ValueError('500 error')
 
-       
+
 
        
     

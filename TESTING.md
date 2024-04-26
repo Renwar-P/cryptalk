@@ -1,4 +1,4 @@
-## Testing 
+# Testing 
 All testing in this project has been done manually during the development process and after. They assumed result of clicking the buttons and testing the features are documented in this Readme file. This has been done by simply clicking on the buttons/links and testing all the functions to see if it produced the desired outcome. All the functions in the project are working. 
 
 Django is a python framework so most of the code is written in python. The part of the code that is in js is the alert messages. They work as expected. CryptoTalk has today no socialmedia today so the links go to their respective homepages.
@@ -7,9 +7,28 @@ Because this project was developed with Bootstrap it is fully responsive on all 
 
 In the development of this project I encountered several bugs. They are covered in the bugs section. 
 
+### Table of Content
+---------------------------------------------------------------------
 
-### Automated testing
-I initiated the automated testing. I wanted to test with pythons unittest and to use jest for the little js code in the project. However I could not fix the import issue. When running the tests I got the message that its missing a parent directory and I couldn´t import the block of code I wanted tested. To resolve this I contacted the tutor support that Code Institute provides. That tutor couldn´t locate the problem. Considering the deadline and that its not required for this project, I decided to proceed with only manual testing. 
+- [Table of Content](#table-of-content)
+ - [Validator Testing](#validator-testing)
+      - [Validator Testing Signup Page](#signup-page)
+      - [Validator Testing Postlists Page](#postlists-page)
+      - [Validator Testing Add Post Page](#add-post-page)
+      - [Validator Testing Delete Post Page](#delete-post-page)
+      - [Validator Testing Edit Post Page](#edit-post-page)
+      - [Validator Testing Home Page](#home-page)
+      - [Validator Testing Logout Page](#logout-page)
+      - [Validator Testing Login Page](#login-page)
+      - [Validator Testing Postdetail Page](#postdetail-page)
+      - [Validator Testing Edit Comment Page](#edit-comment-page)
+      - [Validator Testing Delete Comment Page](#delete-comment-page)
+      - [Validator Testing 404 Page](#404-page)
+      - [Validator Testing 500 Page](#500-page)
+- [Lighthouse](#lighthouse)
+- [CSS Testing](#css-testing)
+- [Features Testing](#features-testing)
+      
 
 
 
@@ -21,69 +40,69 @@ Testing with <https://validator.w3.org/> shows no errors in html:
 #### Signup Page
 
 
-![Validator testing](static/testing-images/sign_up_page.png)
+![Validator Testing Signup Page](static/testing-images/sign_up_page.png)
 
 #### Postlist Page
 
 
-![Validator testing](static/images-readme/post_list_page.png)
+![Validator Testing Postlists Page](static/images-readme/post_list_page.png)
 
 #### Add Post Page
 
 
-![Validator testing](static/testing-images/add_post_page.png)
+![Validator Testing Add Post Page](static/testing-images/add_post_page.png)
 
 #### Delete Post Page
 
 
-![Validator testing](static/testing-images/delete_post.png)
+![Validator Testing Delete Post Page](static/testing-images/delete_post.png)
 
 #### Edit Post Page
 
 
-![Validator testing](static/testing-images/edit_post_page.png)
+![Validator Testing Edit Post Page](static/testing-images/edit_post_page.png)
 
-#### Index/Home Page
+#### Home Page
 
 
-![Validator testing](static/testing-images/index_page.png)
+![Validator Testing Home Page](static/testing-images/index_page.png)
 
 #### Logout Page
 
 
-![Validator testing](static/testing-images/log_out_page.png)
+![Validator Testing Logout Page](static/testing-images/log_out_page.png)
 
 #### Login Page
 
 
-![Validator testing](static/testing-images/login_page.png)
+![Validator Testing Login Page](static/testing-images/login_page.png)
 
 
 
 #### Postdetail Page
 
 
-![Validator testing](static/testing-images/post_detail_page.png)
+![Validator Testing Postdetail Page](static/testing-images/post_detail_page.png)
 
 #### Edit Comment Page
 
 
-![Validator testing](static/images-readme/edit_comment_page_check.png)
+![Validator Testing Edit Comment Page](static/images-readme/edit_comment_page_check.png)
 
 #### Delete Comment Page
 
 
-![Validator testing](static/images-readme/delete_comment_page_check.png)
+![Validator Testing Delete Comment Page](static/images-readme/delete_comment_page_check.png)
 
 #### 404 Page
 
 
-![Validator testing](static/images-readme/404_check.png)
+![Validator Testing 404 Page](static/images-readme/404_check.png)
 
 #### 500 Page
 
 
-![Validator testing](static/images-readme/500_check.png)
+![Validator Testing 500 Page](static/images-readme/500_check.png)
 
 
 
@@ -163,6 +182,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Sign Out button | Redirect to Home page, message that you signed out | PASS |
 |               | Logging out | Confirmation that the user has logged out| PASS |
@@ -171,6 +191,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Choose file link (featured image) | Open up file browser| PASS |
 |               | Click on Choose file link (author image) | Open up file browser| PASS |
@@ -188,17 +209,19 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Like icon | Likes added | PASS |
-|               | Click on submit button | Comments added | PASS |
-|               | Click on edit comment link | Redirect to Edit Comment Page    | PASS |
-|               | Click on delete comment link | Redirect to Delete Comment Page    | PASS |
-|               | Create a comment | Confirmation that the comment has been created | PASS |
+|               | Click on Submit button | Comments added | PASS |
+|               | Click on Edit comment link | Redirect to Edit Comment Page    | PASS |
+|               | Click on Delete comment link | Redirect to Delete Comment Page    | PASS |
+|               | Create a Comment | Confirmation that the comment has been created | PASS |
 | Edit Post Page |                  |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Choose file link (featured image) | Open up file browser| PASS |
 |               | Click on Choose file link (author image) | Open up file browser| PASS |
 |               | Click on Post button | Redirect to Home page | PASS |
@@ -213,6 +236,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Delete button| Redirect to Home page, message that you deleted a post | PASS |
@@ -222,6 +246,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Submit button| Redirect to Home page| PASS |
 |               |Editing a comment| Confirmation that the comment has been edited | PASS |
@@ -231,10 +256,12 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Delete button| Redirect to Home page, message that you deleted a comment | PASS |
 | 404 Error Page |  |    |    |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link when logged in (Navbar) | Redirect to Add Post page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Login link (Navbar)| Redirect to Login page | PASS |
 |               | Click on Signup link (Navbar)| Redirect to Signup page | PASS |
 |               | Click on Posts when logged in link (Navbar) | Redirect to Postlist page | PASS |
@@ -244,15 +271,9 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Take Me Home button | Redirect to Home page | PASS |
 | 500 Error Page |  |    |    |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
-|               | Click on Add Post link when logged in (Navbar) | Redirect to Add Post page | PASS |
-|               | Click on Login link (Navbar)| Redirect to Login page | PASS |
-|               | Click on Signup link (Navbar)| Redirect to Signup page | PASS |
-|               | Click on Posts link when logged in (Navbar) | Redirect to Postlist page | PASS |
-|               | Click on Logout link when logged in (Navbar)| Redirect to Logout page | PASS |
-|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
-|               | Click on Take Me Home button | Redirect to Home page | PASS |
+|               | Click on Take me home button | Redirect to Add Post page | PASS |
+|               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Admin raise exception in views.py | Custom 500 Error page is displayed, local development testing | PASS |
-|               | Click on Take me home button | Redirect to Home page | PASS |
 | Admin Panel |  |    |    |
 |               | CRUD functionality | Working as expected | PASS |
 

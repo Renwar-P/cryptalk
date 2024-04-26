@@ -6,12 +6,12 @@
 # Table of Content
 
 - [CryptoTalk](#cryptotalk)
+- [Table of Content](#table-of-content)
 - [The purpose with this project](#the-purpose-with-this-project)
 - [Design](#design)
   - [Color Scheme](#color-scheme)
   - [Design diagram](#design-diagram)
   - [Database scheme](#design-diagram)
-- [Table of Content](#table-of-content)
   - [UX](#ux)
     - [User Demographic](#user-demographic)
     - [User Goals](#user-goals)
@@ -35,6 +35,16 @@
       - [Edit Comment](#edit-comment)
       - [Delete Comment](#delete-comment)
       - [Footer](#footer)
+      - [404.page](#404)
+      - [500.page](#500)
+      - [CRUD Logged In](#crud-confirmation-logged-in)
+      - [CRUD Logged Out](#crud-confirmation-logged-out)
+      - [CRUD Post Added](#crud-confirmation-post-added)
+      - [CRUD Post Edited](#crud-confirmation-post-edited)
+      - [CRUD Post Deleted](#crud-confirmation-post-deleted)
+      - [CRUD Comment Added](#crud-confirmation-comment-added)
+      - [CRUD Comment Edited](#crud-confirmation-comment-edited)
+      - [CRUD Comment Deleted](#crud-confirmation-comment-deleted)
   - [Features left to implement](#features-left-to-implement)
   - [Languages used](#languages-used)
     - [Frameworks, libraries and tools](#frameworks-libraries-and-tools)
@@ -47,8 +57,7 @@
     - [Field required](#field-required)
     - [Deployment](#deployment)
   - [Unfixed bugs](#unfixed-bugs)
-    - [Automated testing](#automated-testing)
-    - [Validator Testing](#validator-testing)
+    
   - [Deployment](#deployment-1)
   - [Credits](#credits)
     - [Home](#home-1)
@@ -273,7 +282,49 @@ The 404 page appears when a invalid url is entered.
 #### 500
 The 500 page appears when a server error occurs. 
 
-![500.page](static/images-readme/500.page.png)
+![500.page](static/images-readme/500_error.png)
+
+#### CRUD Confirmation Logged In
+The confirmation that the user has logged in appears when the user has succefully logged in. 
+
+![CRUD Logged In](static/images-readme/crud_logged_in.png)
+
+#### CRUD Confirmation Logged Out
+The confirmation that the user has logged out appears when the user has succefully logged out. 
+
+![CRUD Logged Out](static/images-readme/crud_logged_out.png)
+
+#### CRUD Confirmation Post Added
+The confirmation that the user has added a post appears when the user has succefully added a post. 
+
+![CRUD Post Added](static/images-readme/crud_add_post.png)
+
+#### CRUD Confirmation Post Edited
+The confirmation that the user has edited a post appears when the user has succefully edited a post. 
+
+![CRUD Post Edited](static/images-readme/crud_post_edited.png)
+
+#### CRUD Confirmation Post Deleted
+The confirmation that the user has deleted a post appears when the user has succefully deleted a post. 
+
+![CRUD Post Deleted](static/images-readme/crud_delete_post.png)
+
+#### CRUD Confirmation Comment Added
+The confirmation that the user has added a comment appears when the user has succefully added a comment. 
+
+![CRUD Comment Added](static/images-readme/crud_comment_added.png)
+
+#### CRUD Confirmation Comment Edited
+The confirmation that the user has edited a comment appears when the user has succefully edited a comment. 
+
+![CRUD Comment Edited](static/images-readme/crud_comment_edited.png)
+
+
+#### CRUD Confirmation Comment Deleted
+The confirmation that the user has deleted a comment appears when the user has succefully deleted a comment. 
+
+![CRUD Comment Deleted](static/images-readme/crud_comment_deleted.png)
+
 
 
 
