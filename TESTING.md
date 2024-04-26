@@ -68,7 +68,7 @@ The site went through responsiveness testing in DevTools and at [amiresponsive.c
 
 
 ### Browser Compatibility Testing
-
+-------------------------------------------------------------------
 The project was tested on multiple web browsers to check for compatibility issues. This is done to make sure that the user will have a pleasant UX regardless of the webbrowser.
 
 <details>
