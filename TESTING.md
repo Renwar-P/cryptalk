@@ -30,6 +30,65 @@ In the development of this project I encountered several bugs. They are covered 
 - [Features Testing](#features-testing)
       
 
+### Responsiveness Testing
+
+![Responsive screenshot](static/images-readme/cryptalk-responsive.png)
+
+
+<details>
+<summary> Desktop PC
+</summary>
+
+![Desktop PC](static/images-readme/desktop.png)
+</details>
+
+<details>
+<summary> Laptop
+</summary>
+
+![Laptop](static/images-readme/laptop.png)
+</details>
+
+<details>
+<summary> Tablet
+</summary>
+
+![Tablet](static/images-readme/tablet.png)
+</details>
+
+<details>
+<summary> Mobile
+</summary>
+
+![Mobile](static/images-readme/mobile.png)
+</details>
+
+
+### Browser Compatibility Testing
+
+The project was tested on multiple web browsers to check for compatibility issues. This is done to make sure that the user will have a pleasant UX regardless of the webbrowser.
+
+<details>
+<summary> Chrome
+</summary>
+
+![Chrome](static/images-readme/chrome.png)
+</details>
+
+<details>
+<summary> Microsoft Edge
+</summary>
+
+![Microsoft Edge](static/images-readme/edge.png)
+</details>
+
+<details>
+<summary> Mozilla Firefox
+</summary>
+
+![Mozilla Firefox](static/images-readme/firefox.png)
+</details>
+
 
 
 ### Validator Testing
