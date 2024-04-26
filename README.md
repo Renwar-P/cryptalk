@@ -205,12 +205,12 @@ The sites navbar is located at the top of each page. This adds to consistency an
 
 The sites sign up page is simple and intuitive. 
 
-![Sign Up](static/images-readme/sign-up.png)
+![Sign Up](static/images-readme/signup.png)
 
 #### Login
 The sites login page tells the user what it needs to validate. 
 
-![Login](static/images-readme/sign-in.png)
+![Login](static/images-readme/login.png)
 
 #### Logout
 The sites logout page asks one simple question. 
