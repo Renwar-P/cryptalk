@@ -1,16 +1,17 @@
-# Testing 
-All testing in this project has been done manually during the development process and after. They assumed result of clicking the buttons and testing the features are documented in this Readme file. This has been done by simply clicking on the buttons/links and testing all the functions to see if it produced the desired outcome. All the functions in the project are working. 
+# CryptoTalk Testing 
+All testing in this project has been done manually during the development process and after. They assumed result of clicking the buttons and testing the features are documented in this Testing.md file. This has been done by simply clicking on the buttons/links and testing all the functions to see if it produced the desired outcome. All the functions in the project are working. 
 
 Django is a python framework so most of the code is written in python. The part of the code that is in js is the alert messages. They work as expected. CryptoTalk has today no socialmedia today so the links go to their respective homepages.
 
 Because this project was developed with Bootstrap it is fully responsive on all screen sizes.  
 
-In the development of this project I encountered several bugs. They are covered in the bugs section. 
 
 ### Table of Content
 ---------------------------------------------------------------------
 
 - [Table of Content](#table-of-content)
+- [Responsiveness Testing](#responsiveness-testing)
+- [Browser Compatibility Testing](#browser-compatibility-testing)
  - [Validator Testing](#validator-testing)
       - [Validator Testing Signup Page](#signup-page)
       - [Validator Testing Postlists Page](#postlists-page)
@@ -31,6 +32,8 @@ In the development of this project I encountered several bugs. They are covered 
       
 
 ### Responsiveness Testing
+----------------------------------------------
+The site went through responsiveness testing in DevTools and at [amiresponsive.co.uk](https://amiresponsive.co.uk/). 
 
 ![Responsive screenshot](static/images-readme/cryptalk-responsive.png)
 
@@ -336,6 +339,6 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 | Admin Panel |  |    |    |
 |               | CRUD functionality | Working as expected | PASS |
 
-
+Return to [README](README.md)
 
 
