@@ -18,7 +18,6 @@
     - [User Stories](#user-stories)
       - [Admin](#admin)
       - [User](#user)
-    - [Project Purpose](#project-purpose)
     - [Site navigation](#site-navigation)
   - [Features](#features)
     - [Existing Features](#existing-features)
@@ -73,16 +72,8 @@
     - [Comment](#comment-1)
     - [Edit Comment](#edit-1)
     - [Delete Comment](#delete-1)
-
-+ [Languages used](#languages-used "Languages used")
-  - [Frameworks and libraries and tools](#frameworks-and-libraries-and-tools "Frameworks and libraries and tools")
-  - [Installed packages](#installed-packages "Installed packages")
-- [Bugs](#bugs "Bugs")
-  - [Bugs during development](#bugs-during-development "Bugs during development")
-  - [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
-- [Deployment](#deployment "deployment")
-- [Content](#content "Content")
-- [Credits](#credits "Credits")
+    - [404](#404)
+    - [500](#500)
 - [Acknowledgements](#acknowledgements "Acknowledgements")
 
 
@@ -99,6 +90,9 @@ Required technologies for this project:
 - Relational database (SQL)
 
 A live version of this project can be found at this url: <https://cryptalk-32183a196317.herokuapp.com/>
+
+The testing done in this project is displayed in a separate [Testing](TESTING.md) file.
+
 
 # Design 
 
@@ -369,7 +363,9 @@ The confirmation that the user has deleted a comment appears when the user has s
 - requests-oauthlib==1.3.1
 - sqlparse==0.4.4
 
+## Testing
 
+The testing done in this project is largely manual testing. The results are displayed in a separate [Testing](TESTING.md) file.
 
 ## Bugs 
 During development of this project I encountered several bugs. Some of them are covered here:
@@ -496,6 +492,15 @@ The template/code for the delete comment page was inspired by [Freecode camp](ht
 [Codemy](https://codemy.com/) - Django Blog. 
 The "I think therefore I Blog" walkthrough project.
 
+### 404
+The template/code for the 404 page was inspired by [EComposer Landing Page Builder](https://www.youtube.com/watch?v=V9YgUxZwIbI) - How To Create A Custom 404 Page || Easy Guide and the repo https://github.com/Thomas-Tomo/woodland-whispers-retreat/tree/main
+
+
+### 500
+The template/code for the 500 page was inspired by [Code108Labs](https://www.youtube.com/watch?v=YP2iBihYlmc) - How to create custom 404 and 500 error page in django and the repo https://github.com/Thomas-Tomo/woodland-whispers-retreat/tree/main
+
+
+
 
 ## Acknowledgements
-I want to thank my mentor Mitko Bachvarov for his guidance. 
+I want to thank my mentor Mitko Bachvarov for his guidance and patience. 
