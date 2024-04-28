@@ -25,11 +25,4 @@ class PostForm(forms.ModelForm):
         self.fields['title'].required = True
         self.fields['body'].required = True
 
-    def clean(self):
-        cleaned_data = super().clean()
-        coin_type_name = cleaned_data.get('coin_type_name')
-
-        if coin_type_name == 'Other':
-            raise forms.ValidationError("Please enter a valid coin type name.")
-
-        return cleaned_data
+   

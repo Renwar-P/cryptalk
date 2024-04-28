@@ -343,6 +343,7 @@ The confirmation that the user has deleted a comment appears when the user has s
 - Django
 - Bootstrap
 - Cloudinary
+- Gitpod
 
 ### Installed packages
 

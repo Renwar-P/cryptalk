@@ -123,15 +123,6 @@ class AddPostView(LoginRequiredMixin, CreateView):
         form.instance.author_image = self.request.FILES.get('author_image')
 
         
-
-
-
-       
-    
-
-        
-
-        
         form.save()
 
         messages.success(self.request, 'Your post has been created')
@@ -273,6 +264,14 @@ def custom_login(request):
         return render(request, 'login.html')
 
 
+''' 
+The inspiration behind the custom_login function came from Python Django Web Framework - Full Course for Beginners.
+[Codemy](https://codemy.com/) - Django Blog and https://stackoverflow.com/questions/73735351/i-am-trying-to-create-authentication-system-in-django-my-code-is-failing-to-aut
+'''
+
+
+
+
 def custom_handler404(request, exception):
     
 
@@ -282,3 +281,6 @@ def custom_handler404(request, exception):
 def custom_handler500(request):
     
     return render(request, '500.html', status=500)
+
+''' The inspiration for the 404 and 500 pages functions came from the repo https://github.com/Thomas-Tomo/woodland-whispers-retreat/blob/main/cabin_bookings/views.py
+'''

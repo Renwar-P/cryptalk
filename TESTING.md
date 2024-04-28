@@ -1,5 +1,5 @@
 # CryptoTalk Testing 
-All testing in this project has been done manually during the development process and after. They assumed result of clicking the buttons and testing the features are documented in this Testing.md file. This has been done by simply clicking on the buttons/links and testing all the functions to see if it produced the desired outcome. All the functions in the project are working. 
+All testing in this project has been done manually during the development process and after. The expected result of clicking the buttons and testing the features are documented in this Testing.md file. This has been done by simply clicking on the buttons/links and testing all the functions to see if it produced the desired outcome. All the functions in the project are working. 
 
 Django is a python framework so most of the code is written in python. The part of the code that is in js is the alert messages. They work as expected. CryptoTalk has today no socialmedia today so the links go to their respective homepages.
 
