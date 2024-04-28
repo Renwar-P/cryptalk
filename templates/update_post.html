@@ -7,55 +7,55 @@
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="form-group row">
-            <label for="id_title" class="col-sm-2 col-form-label">Title:</label>
-            <div class="col-sm-10">
+            <label for="id_title" class="col-sm-3 col-form-label">Title:</label>
+            <div class="col-sm-5">
               {{ form.title }}
             </div>
           </div>
           <div class="form-group row">
-            <label id="text_input" for="id_body" class="col-sm-2 col-form-label">Text:</label>
-            <div class="col-sm-10">
+            <label id="text_input" for="id_body" class="col-sm-3 col-form-label">Text:</label>
+            <div class="col-sm-5">
               {{ form.body }}
             </div>
           </div>
           <div class="form-group row">
-            <label for="id_coin_type_name" class="col-sm-2 col-form-label">Coin Type Name:(optional)</label>
-            <div class="col-sm-10">
+            <label for="id_coin_type_name" class="col-sm-3 col-form-label">Coin Type Name:(optional)</label>
+            <div class="col-sm-5">
               {{ form.coin_type_name }}
             </div>
           </div>
           <div class="form-group row">
-            <label for="id_coin_type_max_cap" class="col-sm-2 col-form-label">Coin Type Max Cap:(optional)</label>
-            <div class="col-sm-10">
+            <label for="id_coin_type_max_cap" class="col-sm-3 col-form-label">Coin Type Max Cap:(optional)</label>
+            <div class="col-sm-5">
               {{ form.coin_type_max_cap }}
             </div>
           </div>
           <div class="form-group row">
-            <label for="id_coin_type_max_cap" class="col-sm-2 col-form-label">Coin Creator:(optional)</label>
-            <div class="col-sm-10">
+            <label for="id_coin_type_max_cap" class="col-sm-3 col-form-label">Coin Creator:(optional)</label>
+            <div class="col-sm-5">
               {{ form.coin_creator }}
             </div>
           </div>
           <div class="form-group row">
-            <label for="id_coin_type_description" class="col-sm-2 col-form-label">Coin Type Description:(optional)</label>
-            <div class="col-sm-10">
+            <label for="id_coin_type_description" class="col-sm-3 col-form-label">Coin Type Description:(optional)</label>
+            <div class="col-sm-5">
               {{ form.coin_type_description }}
             </div>
           </div>
           <div class="form-group row">
-            <label for="id_featured_image" class="col-sm-2 col-form-label">Article Image:(optional)</label>
-            <div class="col-sm-10">
+            <label for="id_featured_image" class="col-sm-3 col-form-label">Article Image:(optional)</label>
+            <div class="col-sm-5">
               <input type="file" style="margin-bottom: 20px;" id="id_featured_image" name="featured_image">
             </div>
           </div>
           <div class="form-group row">
-            <label for="id_author_image" class="col-sm-2 col-form-label">Profile Image:(optional)</label>
-            <div class="col-sm-10">
+            <label for="id_author_image" class="col-sm-3 col-form-label">Profile Image:(optional)</label>
+            <div class="col-sm-5">
               <input type="file" id="id_author_image" name="author_image">
             </div>
           </div>
           <div class="form-group row">
-            <div class="col-sm-10 offset-sm-2">
+            <div class="col-sm-5 offset-sm-3">
               <button style="margin-top: 20px;" class="btn btn-signup right btn-lg" type="submit">Post</button>
             </div>
           </div>
@@ -63,6 +63,7 @@
       </div>
     </div>
   </div>
+  
 
 {% endblock %}
 
