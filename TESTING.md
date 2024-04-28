@@ -201,7 +201,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 | Home Page     |               |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Login link (Navbar) | Redirect to Login Page | PASS  
-|               | Click on Sign Up link | Redirect to Sign Up page | PASS |
+|               | Click on Sign Up link | Redirect to Signup page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 | Home Page (Logged In - User)  |                 |          |  |
@@ -223,22 +223,26 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Delete link | Redirect to Delete Post page | PASS |
 | Login Page  |                  |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
-|               | Click on Sign up link| Redirect to Sing Up page | PASS |
-|               | Click on Sign up link (Navbar)| Redirect to Sing Up page | PASS |
+|               | Click on Signup link| Redirect to Signup page | PASS |
+|               | Click on Signup link (Navbar)| Redirect to Signup page | PASS |
 |               | Click on Login button | Redirect to Home page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Try without username | Must provide user name| PASS |
 |               | Try without password | Must provide password| PASS |
-|               | Logging in| Confirmation that the user has logged in | PASS |
-| Sign Up Page  |                  |                  |                  |
-|               | Click on Sign up button | Redirect to Home page | PASS |
+|               | Click on Login button | Confirmation that the user has logged in | PASS |
+| Signup Page  |                  |                  |                  |
+|               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
+|               | Click on Home link (Navbar) | Redirect to Home page | PASS |
+|               | Click on Signup link (Navbar)| Redirect to Signup page | PASS |
+|               | Click on Signup button | Redirect to Home page | PASS |
 |               | Try without username | Must provide user name| PASS |
 |               | Try without password | Must provide password| PASS |
+|               | Try without email | Works without adding email | PASS |
 |               | Valid password and username | Logs in, message that you signed in | PASS |
 |               | Click Login link | Redirect to Login page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
-|               | Signing up| Confirmation that the user has logged in | PASS |
+|               | Click on Signup button | Confirmation that the user has logged in | PASS |
 | Logout Page  |                  |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
@@ -246,9 +250,9 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
-|               | Click on Sign Out button | Redirect to Home page, message that you signed out | PASS |
-|               | Logging out | Confirmation that the user has logged out| PASS |
-| Post Page |                  |                  |                  |
+|               | Click on Logout button | Redirect to Home page| PASS |
+|               | Click on Logout button| Confirmation that the user has logged out| PASS |
+| Add Post Page |                  |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
 |               | Click on Posts link (Navbar) | Redirect to Postlist page | PASS |
@@ -257,14 +261,14 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Choose file link (featured image) | Open up file browser| PASS |
 |               | Click on Choose file link (author image) | Open up file browser| PASS |
-|               | Click on Post button | Redirect to Home page | PASS |
+|               | Click on Post button | Redirect to Postlists page | PASS |
 |               | Try without title | Must provide title| PASS |
 |               | Try without text | Must provide text| PASS |
 |               | Try without adding coin type| Works without adding coin type| PASS |
 |               | Try without adding coin description| Works without adding coin description| PASS |
 |               | Try without adding coin max cap| Works without adding coin max cap| PASS |
 |               | Try without adding coin creator| Works without adding coin creator| PASS |
-|               | Creating a post| Confirmation that the post has been created | PASS |
+|               | Click on Post button | Confirmation that the post has been created | PASS |
 | Post Detail Page |                  |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
@@ -276,7 +280,7 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Submit button | Comments added | PASS |
 |               | Click on Edit comment link | Redirect to Edit Comment Page    | PASS |
 |               | Click on Delete comment link | Redirect to Delete Comment Page    | PASS |
-|               | Create a Comment | Confirmation that the comment has been created | PASS |
+|               | Click on Submit button  | Confirmation that the comment has been created | PASS |
 | Edit Post Page |                  |                  |                  |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
@@ -286,14 +290,14 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Choose file link (featured image) | Open up file browser| PASS |
 |               | Click on Choose file link (author image) | Open up file browser| PASS |
-|               | Click on Post button | Redirect to Home page | PASS |
+|               | Click on Post button | Redirect to Postlist page | PASS |
 |               | Try without title | Must provide title| PASS |
 |               | Try without text | Must provide text| PASS |
 |               | Try without adding coin type| Works without adding coin type| PASS |
 |               | Try without adding coin description| Works without adding coin description| PASS |
 |               | Try without adding coin max cap| Works without adding coin max cap| PASS |
 |               | Try without adding coin creator| Works without adding coin creator| PASS |
-|               | Editing/Creating a post| Confirmation that the post has been edited | PASS |PASS |
+|               | Click on Post button | Confirmation that the post has been edited | PASS |PASS |
 | Delete Post Page |  |    |    |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
@@ -301,8 +305,8 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
-|               | Click on Delete button| Redirect to Home page, message that you deleted a post | PASS |
-|               | Deleting a post| Confirmation that the post has been deleted | PASS |
+|               | Click on Delete button | Redirect to Postlists page | PASS |
+|               | Click on Delete button | Confirmation that the post has been deleted | PASS |
 | Edit Comment Page |  |    |    |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
@@ -310,8 +314,8 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
-|               | Click on Submit button| Redirect to Home page| PASS |
-|               |Editing a comment| Confirmation that the comment has been edited | PASS |
+|               | Click on Submit button | Redirect to Postdetail page| PASS |
+|               | Click on Submit button | Confirmation that the comment has been edited | PASS |
 | Delete Comment Page |  |    |    |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link (Navbar) | Redirect to Add Post page | PASS |
@@ -319,7 +323,8 @@ Testing with <https://jigsaw.w3.org/css-validator/> show no errors in CSS:
 |               | Click on Logout link (Navbar)| Redirect to Logout page | PASS |
 |               | Click on Home link (Navbar) | Redirect to Home page | PASS |
 |               | Click on Social links in footer | Open new tab with appropriate link | PASS |
-|               | Click on Delete button| Redirect to Home page, message that you deleted a comment | PASS |
+|               | Click on Delete button | Redirect to Postdetail page| PASS |
+|               | Click on Delete button | Confirmation that the comment has been deleted | PASS |
 | 404 Error Page |  |    |    |
 |               | Click on Logo (Navbar) | Redirect to Home Page | PASS        |
 |               | Click on Add Post link when logged in (Navbar) | Redirect to Add Post page | PASS |
